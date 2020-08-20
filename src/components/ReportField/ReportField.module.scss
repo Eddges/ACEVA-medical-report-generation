@@ -1,17 +1,51 @@
 .Container{
     width : 100%;
     display : flex;
-    height : 100px;
-    border-radius: 5px;
+    height : 50px;
     background-color: #ffffff;
-    box-shadow:  14px 14px 29px #e3e3e3, 
-                -14px -14px 29px #ffffff;
-    margin-top : 20px;
+    // box-shadow:  14px 14px 29px #e3e3e3, 
+    //             -14px -14px 29px #ffffff;
+    // margin-top : 10px;
+    // box-shadow : 0px 0px 10px rgba(0, 0, 0, 0.054);
     align-items: center;
-    .Title{
-        font-size : 1.5rem;
-        color : rgb(104, 104, 104);
+    padding : 0px 20px;
+    .Icon{
+        width : 8%;
+    }
+    .Item{
+        width : 18%;
+        color : #043c70;
+        font-weight : 700;
+        font-size : 1rem;
+        color : #0075f6;
+    }
+    .CurrDate{
+        font-weight: 400;
+        color : rgb(68, 68, 68);
+        font-size : 0.7rem;
+        span{
+            font-size : 1rem;
+            // color : #043c70;
+            color : #0075f6;
+            margin-right : 15px;
+            font-weight: 700;
+        }
+    }
+    .PrevDate{
+        font-weight: 400;
+        color : rgb(68, 68, 68);
+        font-size : 0.7rem;
+        span{
+            font-size : 1rem;
+            color : #043c70;
+            color : #0075f6;
+            margin-right : 15px;
+            font-weight: 700;
+        }
+    }
+    .Status{
         font-weight: 600;
-        margin-left : 40px;
+        font-size : 1rem;
+        color : red;
     }
 }

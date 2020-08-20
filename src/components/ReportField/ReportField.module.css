@@ -3,21 +3,56 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100px;
-  border-radius: 5px;
+  height: 50px;
   background-color: #ffffff;
-  -webkit-box-shadow: 14px 14px 29px #e3e3e3,  -14px -14px 29px #ffffff;
-          box-shadow: 14px 14px 29px #e3e3e3,  -14px -14px 29px #ffffff;
-  margin-top: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0px 20px;
 }
 
-.Container .Title {
-  font-size: 1.5rem;
-  color: #686868;
+.Container .Icon {
+  width: 8%;
+}
+
+.Container .Item {
+  width: 18%;
+  color: #043c70;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0075f6;
+}
+
+.Container .CurrDate {
+  font-weight: 400;
+  color: #444444;
+  font-size: 0.7rem;
+}
+
+.Container .CurrDate span {
+  font-size: 1rem;
+  color: #0075f6;
+  margin-right: 15px;
+  font-weight: 700;
+}
+
+.Container .PrevDate {
+  font-weight: 400;
+  color: #444444;
+  font-size: 0.7rem;
+}
+
+.Container .PrevDate span {
+  font-size: 1rem;
+  color: #043c70;
+  color: #0075f6;
+  margin-right: 15px;
+  font-weight: 700;
+}
+
+.Container .Status {
   font-weight: 600;
-  margin-left: 40px;
+  font-size: 1rem;
+  color: red;
 }
 /*# sourceMappingURL=ReportField.module.css.map */
