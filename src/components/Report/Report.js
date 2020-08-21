@@ -2,10 +2,43 @@ import React from 'react'
 import classes from './Report.module.css'
 import ReportField from '../ReportField/ReportField'
 import Logo from '../../assets/ChiroHDLogo.png'
+import record from '../../data/record'
+import ref from '../../data/ref'
 
 
 class Report extends React.Component{
+
     render(){
+
+        const currUser = 'Epic'
+        const userInfo = record.find(user => {
+            return user.user === currUser
+        })
+
+        const mainArray = ref.map((iterator, index) => {
+            const field = {
+                description : iterator.description,
+                specific : iterator.specific,
+                currentDate : userInfo.report[`${iterator.specific}`].current.date,
+                previousDate : userInfo.report[`${iterator.specific}`].previous.date,
+                currentValue : userInfo.report[`${iterator.specific}`].current.value,
+                previousValue : userInfo.report[`${iterator.specific}`].previous.value,
+                rangeLower : iterator.lower,
+                rangeUpper : iterator.upper
+            }
+            let status="GREEN"
+            if(userInfo.report[`${iterator.specific}`].current.value < iterator.lower || userInfo.report[`${iterator.specific}`].current.value > iterator.upper) {
+                status="AMBER"
+            }
+            if(userInfo.report[`${iterator.specific}`].current.value < iterator.criticalLower || userInfo.report[`${iterator.specific}`].current.value > iterator.criticalUpper) {
+                status="RED"
+            }
+            field.status = status
+            return field
+        })
+
+        console.log('mainArray : ', mainArray)
+
         return(
             <div className={classes.Container}>
                 <div className={classes.Report}>
@@ -25,7 +58,6 @@ class Report extends React.Component{
                         </div>
 
                         <div className={classes.LabelFilter}>
-                            {/* <div className={classes.Filter}></div> */}
                             <i className="fas fa-eye" style={{'color' : '#0075f6'}}></i>
                             <div className={classes.VerticalLine}></div>
                         </div>
@@ -45,32 +77,18 @@ class Report extends React.Component{
                         </div>
 
                         <div className={classes.MidReport}>
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-                            <ReportField />
-
+                            {mainArray.map((iterator, index) => {
+                                return(
+                                    <ReportField {...iterator} key={index} />
+                                )
+                            })}
+                            {mainArray.map((iterator, index) => {
+                                return(
+                                    <ReportField {...iterator} key={index} />
+                                )
+                            })}
                         </div>
-                        
                     </div>
-                    {/* <ReportField />
-                    <ReportField />
-                    <ReportField /> */}
                 </div>
                 
 
