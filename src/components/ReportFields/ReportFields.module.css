@@ -1,0 +1,43 @@
+.Mid {
+  width: 100%;
+  background-color: #f0f4f9;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Mid .MidTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  padding: 0px 20px;
+}
+
+.Mid .MidTop .ItemIcon {
+  width: 8%;
+}
+
+.Mid .MidTop .Item {
+  width: 18%;
+  color: #818181;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Mid .MidReport {
+  width: 100%;
+  height: 60vh;
+  overflow: auto;
+}
+/*# sourceMappingURL=ReportFields.module.css.map */

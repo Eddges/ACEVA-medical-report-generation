@@ -1,12 +1,14 @@
 import React from 'react'
 import classes from './Report.module.css'
-import ReportField from '../ReportField/ReportField'
 import Logo from '../../assets/ChiroHDLogo.png'
 import record from '../../data/record'
 import ref from '../../data/ref'
+import ReactToPrint from 'react-to-print';
+import ReportFields from '../ReportFields/ReportFields'
 
 
-class Report extends React.Component{
+
+class MedReport extends React.Component{
 
     render(){
 
@@ -42,6 +44,7 @@ class Report extends React.Component{
         return(
             <div className={classes.Container}>
                 <div className={classes.Report}>
+
                     <div className={classes.Top}>
 
                         <img src={Logo} alt="Logo" />
@@ -62,9 +65,20 @@ class Report extends React.Component{
                             <div className={classes.VerticalLine}></div>
                         </div>
 
+                        <ReactToPrint
+                            trigger={() => {
+                                // NOTE: could just as easily return <SomeComponent />. Do NOT pass an `onClick` prop
+                                // to the root node of the returned component as it will be overwritten.
+                                return <a href="#">Print this out!</a>;
+                            }}
+                            content={() => this.componentRef}
+                            />
                     </div>
 
-                    <div className={classes.Mid}>
+                    <ReportFields ref={el => (this.componentRef = el)} mainArray={mainArray} />
+
+
+                    {/* <div className={classes.Mid}>
                         <div className={classes.MidTop}>
 
                             <i className={`${classes.ItemIcon} ${"fas fa-file-medical"}`} style={{'color' : '#0075f6'}}></i>
@@ -88,13 +102,14 @@ class Report extends React.Component{
                                 )
                             })}
                         </div>
-                    </div>
+                    </div> */}
+
                 </div>
                 
-
+                                
             </div>
         )
     }
 }
 
-export default Report
+export default MedReport

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "PDFReport.module.scss"
+    ],
+    "names": [],
+    "file": "PDFReport.module.css"
+}
