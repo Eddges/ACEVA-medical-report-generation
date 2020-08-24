@@ -8,8 +8,8 @@ class App extends React.Component{
 
         return(
             <div>
-                <FormPage/>
-                {/* <MedReport />             */}
+                {/* <FormPage/> */}
+                <MedReport />            
             </div>
         )
     }
