@@ -69,7 +69,7 @@ class MedReport extends React.Component{
                             trigger={() => {
                                 // NOTE: could just as easily return <SomeComponent />. Do NOT pass an `onClick` prop
                                 // to the root node of the returned component as it will be overwritten.
-                                return <a href="#">Print this out!</a>;
+                                return <button className = {classes.btn}><a href="#">Print this out!</a></button>;
                             }}
                             content={() => this.componentRef}
                             />
