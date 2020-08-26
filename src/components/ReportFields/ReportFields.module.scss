@@ -5,23 +5,28 @@
     border-radius : 10px;
     display : flex;
     flex-direction: column;
+    overflow : auto;
+    width : auto;
     .MidTop{
         display : flex;
         align-items: center;
-        height : 60px;
+        min-height : 60px;
         padding : 0px 20px;
+        // width : auto;
+        overflow : auto;
         .ItemIcon{
-            width : 8%;
+            min-width : 50px;
         }
         .Item{
-            width : 18%;
+            min-width : 180px;
             color : rgb(129, 129, 129);
             font-weight: 600;
             display : flex;
+            // background-color: yellow;
         }
     }
     .MidReport{
-        width : 100%;
+        width : auto;
         // display : flex;
         // flex-direction: column;
         height : 60vh;

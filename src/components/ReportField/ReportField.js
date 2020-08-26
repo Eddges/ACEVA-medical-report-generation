@@ -28,7 +28,9 @@ const ReportField = (props) => {
             <span className={`${classes.Item}`}>{props.specific}</span>
             <span className={`${classes.Item} ${classes.CurrDate}`}> <span>{props.currentValue}</span>{props.currentDate}</span>
             <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span>{props.previousDate}</span>
-            <span className={`${classes.Item} ${classes.Status}`} style={{'color' : `${props.status}`}}>{props.status}</span>
+            <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span>{props.previousDate}</span>
+            <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span>{props.previousDate}</span>
+            {/* <span className={`${classes.Item} ${classes.Status}`} style={{'color' : `${props.status}`}}>{props.status}</span> */}
             <span className={`${classes.Item} ${classes.Reference}`}>{props.rangeLower}-{props.rangeUpper} %</span>
         </div>
     )

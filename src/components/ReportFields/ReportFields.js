@@ -11,13 +11,16 @@ class ReportFields extends React.Component{
                     <i className={`${classes.ItemIcon} ${"fas fa-file-medical"}`} style={{'color' : '#0075f6'}}></i>
                     <span className={classes.Item}>Field</span>
                     <span className={classes.Item}>Current</span>
-                    <span className={classes.Item}>Previous</span>
-                    <span className={classes.Item}>Status</span>
+                    <span className={classes.Item}>Previous 1</span>
+                    <span className={classes.Item}>Previous 2</span>
+                    <span className={classes.Item}>Previous 3</span>
+
+                    {/* <span className={classes.Item}>Status</span> */}
                     <span className={classes.Item}>Reference</span>
 
                 </div>
 
-                <div className={classes.MidReport}>
+                {/* <div className={classes.MidReport}> */}
                     {this.props.mainArray.map((iterator, index) => {
                         return(
                             <ReportField {...iterator} key={index} />
@@ -28,7 +31,7 @@ class ReportFields extends React.Component{
                             <ReportField {...iterator} key={index} />
                         )
                     })}
-                </div>
+                {/* </div> */}
             </div>
         )
     }

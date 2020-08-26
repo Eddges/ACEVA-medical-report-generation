@@ -74,35 +74,10 @@ class MedReport extends React.Component{
                             content={() => this.componentRef}
                             />
                     </div>
-
-                    <ReportFields ref={el => (this.componentRef = el)} mainArray={mainArray} />
-
-
-                    {/* <div className={classes.Mid}>
-                        <div className={classes.MidTop}>
-
-                            <i className={`${classes.ItemIcon} ${"fas fa-file-medical"}`} style={{'color' : '#0075f6'}}></i>
-                            <span className={classes.Item}>Field</span>
-                            <span className={classes.Item}>Current</span>
-                            <span className={classes.Item}>Previous</span>
-                            <span className={classes.Item}>Status</span>
-                            <span className={classes.Item}>Reference</span>
-
-                        </div>
-
-                        <div className={classes.MidReport}>
-                            {mainArray.map((iterator, index) => {
-                                return(
-                                    <ReportField {...iterator} key={index} />
-                                )
-                            })}
-                            {mainArray.map((iterator, index) => {
-                                return(
-                                    <ReportField {...iterator} key={index} />
-                                )
-                            })}
-                        </div>
-                    </div> */}
+                    
+                    <div className={classes.Mid}>
+                        <ReportFields ref={el => (this.componentRef = el)} mainArray={mainArray} />
+                    </div>
 
                 </div>
                 
