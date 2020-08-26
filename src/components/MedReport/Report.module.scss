@@ -109,39 +109,75 @@
                     background-color : #043c7007;
                 }
             }
+            .PDF {
+                background-color : #0075f6;
+                color : white;
+                font-weight: 600;
+                padding : 15px 30px;
+                border : none;
+                border-radius: 5px;
+                margin-left : 10px;
+                transition : all 0.2s;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #005dc0;
+                }
+            }
         }
         .Mid{
             width : 100%;
-            // padding : 0px 20px;
-            background-color : #f0f4f9;
+            // width : auto;
+            // background-color : #f0f4f9;
             border-radius : 10px;
             display : flex;
             flex-direction: column;
             align-items: flex-start;
             overflow : auto;
-            .MidTop{
-                display : flex;
-                align-items: center;
-                height : 60px;
-                padding : 0px 20px;
-                .ItemIcon{
-                    width : 8%;
-                }
-                .Item{
-                    width : 18%;
-                    color : rgb(129, 129, 129);
-                    font-weight: 600;
-                    display : flex;
-                }
-            }
-            .MidReport{
-                width : 100%;
-                // display : flex;
-                // flex-direction: column;
-                height : 60vh;
-                overflow : auto;
-            }
         }
     }
 
+}
+
+
+@media(max-width : 576px) {
+    .Container{
+        padding : 10px 10px;
+        .Report{
+            padding : 10px 5px;
+            .Top{
+                padding : 0px 5px;
+                flex-wrap: wrap;
+                justify-content: center;
+                min-height: auto;
+                img{
+                    height : auto;
+                    width : 70%;
+                    margin : 0px;
+                    margin : 0% 15%;
+                }
+                .Select{
+                    width : 40%;
+                    margin-left : 0px;
+                    margin-top : 10px;
+                    margin-bottom : 10px;
+                    select{
+                        height : 40px;
+                        width : 100%;
+                    }
+                }
+                .LabelFilter{
+                    margin-left : 10px;
+                    margin-top : 10px;
+                    margin-bottom : 10px;
+                }
+                .PDF{
+                    width : 30%;
+                    margin-left : 10px;
+                    margin-top : 10px;
+                    margin-bottom : 10px;
+                    padding : 14px 10px;
+                }
+            }
+        }
+    }
 }

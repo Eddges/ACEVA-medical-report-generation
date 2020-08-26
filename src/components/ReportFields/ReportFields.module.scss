@@ -1,7 +1,7 @@
 .Mid{
     width : 100%;
     // padding : 0px 20px;
-    background-color : #f0f4f9;
+    
     border-radius : 10px;
     display : flex;
     flex-direction: column;
@@ -14,15 +14,19 @@
         padding : 0px 20px;
         // width : auto;
         overflow : auto;
+        background-color : #f0f4f9;
         .ItemIcon{
-            min-width : 50px;
+            min-width : 80px;
         }
         .Item{
-            min-width : 180px;
+            min-width : 140px;
             color : rgb(129, 129, 129);
             font-weight: 600;
             display : flex;
             // background-color: yellow;
+        }
+        .Specific{
+            min-width : 200px;
         }
     }
     .MidReport{

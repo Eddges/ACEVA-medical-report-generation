@@ -4,6 +4,7 @@ import classes from './ReportField.module.css'
 const ReportField = (props) => {
 
     let icon = "fas fa-band-aid"
+    let bgcol = 'white'
 
     // switch (props.description) {
     //     case 'rbcHealth' : 
@@ -20,13 +21,21 @@ const ReportField = (props) => {
         icon = 'fas fa-cookie-bite'
     }
 
-
+    if(props.status ==='RED') {
+        bgcol = 'rgba(255, 0, 0)'
+    }
+    if(props.status ==='AMBER') {
+        bgcol = '#f0b802'
+    }
+    if(props.status ==='GREEN') {
+        bgcol = 'rgb(9, 160, 54)'
+    }
 
     return (
         <div className={classes.Container}>
-            <i className={`${classes.Icon} ${icon}`} style={{'color' : '#0075f6'}}></i>
-            <span className={`${classes.Item}`}>{props.specific}</span>
-            <span className={`${classes.Item} ${classes.CurrDate}`}> <span>{props.currentValue}</span>{props.currentDate}</span>
+            <i className={`${classes.Icon} ${icon}`} style={{'color' : bgcol}}></i>
+            <span className={`${classes.Item} ${classes.Specific}`} style={{'color' : bgcol}}>{props.specific}</span>
+            <span className={`${classes.Item} ${classes.CurrDate}`}> <span style={{'color' : bgcol}}>{props.currentValue}</span>{props.currentDate}</span>
             <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span>{props.previousDate}</span>
             <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span>{props.previousDate}</span>
             <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span>{props.previousDate}</span>

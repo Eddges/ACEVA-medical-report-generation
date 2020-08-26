@@ -161,9 +161,25 @@
   background-color: #043c7007;
 }
 
+.Container .Report .Top .PDF {
+  background-color: #0075f6;
+  color: white;
+  font-weight: 600;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.Container .Report .Top .PDF:hover {
+  cursor: pointer;
+  background-color: #005dc0;
+}
+
 .Container .Report .Mid {
   width: 100%;
-  background-color: #f0f4f9;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,33 +194,49 @@
   overflow: auto;
 }
 
-.Container .Report .Mid .MidTop {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 60px;
-  padding: 0px 20px;
-}
-
-.Container .Report .Mid .MidTop .ItemIcon {
-  width: 8%;
-}
-
-.Container .Report .Mid .MidTop .Item {
-  width: 18%;
-  color: #818181;
-  font-weight: 600;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.Container .Report .Mid .MidReport {
-  width: 100%;
-  height: 60vh;
-  overflow: auto;
+@media (max-width: 576px) {
+  .Container {
+    padding: 10px 10px;
+  }
+  .Container .Report {
+    padding: 10px 5px;
+  }
+  .Container .Report .Top {
+    padding: 0px 5px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: auto;
+  }
+  .Container .Report .Top img {
+    height: auto;
+    width: 70%;
+    margin: 0px;
+    margin: 0% 15%;
+  }
+  .Container .Report .Top .Select {
+    width: 40%;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .Container .Report .Top .Select select {
+    height: 40px;
+    width: 100%;
+  }
+  .Container .Report .Top .LabelFilter {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .Container .Report .Top .PDF {
+    width: 30%;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 14px 10px;
+  }
 }
 /*# sourceMappingURL=Report.module.css.map */

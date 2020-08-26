@@ -9,7 +9,7 @@ class ReportFields extends React.Component{
                 <div className={classes.MidTop}>
 
                     <i className={`${classes.ItemIcon} ${"fas fa-file-medical"}`} style={{'color' : '#0075f6'}}></i>
-                    <span className={classes.Item}>Field</span>
+                    <span className={`${classes.Item} ${classes.Specific}`}>Field</span>
                     <span className={classes.Item}>Current</span>
                     <span className={classes.Item}>Previous 1</span>
                     <span className={classes.Item}>Previous 2</span>

@@ -49,9 +49,9 @@ class MedReport extends React.Component{
 
                         <img src={Logo} alt="Logo" />
 
-                        <div className={classes.Search}>
+                        {/* <div className={classes.Search}>
                             <input placeholder="Search Record" />
-                        </div>
+                        </div> */}
 
                         <div className={classes.Select}>
                             <select>
@@ -69,7 +69,7 @@ class MedReport extends React.Component{
                             trigger={() => {
                                 // NOTE: could just as easily return <SomeComponent />. Do NOT pass an `onClick` prop
                                 // to the root node of the returned component as it will be overwritten.
-                                return <button className = {classes.btn}><a href="#">Print this out!</a></button>;
+                                return <button className = {classes.PDF}>Save as PDF</button>;
                             }}
                             content={() => this.componentRef}
                             />

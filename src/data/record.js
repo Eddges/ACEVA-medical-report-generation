@@ -35,7 +35,7 @@ const record = [
             'HBA1C' : {
                 current : {
                     date : '18-08-20',
-                    value : 12
+                    value : 70
                 },
                 previous : {
                     date : '22-11-17',
