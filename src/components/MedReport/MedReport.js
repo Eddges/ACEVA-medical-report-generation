@@ -81,15 +81,15 @@ class MedReport extends React.Component{
 
                         <div className={classes.UserAreaDesktop}>
 
-                            <div className={classes.UserDetails}>
-                                <i className="fas fa-user-circle" style={{'color' : 'grey'}}></i>
-                                <span className={classes.UserName}>{currUser}</span>
-                            </div>
-
                             <div className={classes.PrescriptionDetails}>
                                 {userInfo.prescription.map(iterator => (
                                     <span className={classes.PrescriptionItem}>{iterator}</span>
                                 ))}
+                            </div>
+
+                            <div className={classes.UserDetails}>
+                                <i className="fas fa-user-circle" style={{'color' : 'grey'}}></i>
+                                <span className={classes.UserName}>{currUser}</span>
                             </div>
 
                         </div>
