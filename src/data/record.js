@@ -1,6 +1,7 @@
 const record = [
     {
-        user : "Epic",
+        user : "John Doe",
+        prescription : ['Vitamin 1 200mg', 'Vitamin 2 B12 Complex', 'Vitamin 3 Random Name', 'Vitamin 4 Name'],
         report : {
             'RBC' : {
                 current : {
@@ -8,7 +9,7 @@ const record = [
                     value : 54
                 },
                 previous : {
-                    date : '12-05-20',
+                    date : '11-05-20',
                     value : 65
                 }
             },
@@ -24,21 +25,21 @@ const record = [
             },
             'GLUCOSE' : {
                 current : {
-                    date : '12-05-20',
+                    date : '12-08-20',
                     value : 67
                 },
                 previous : {
-                    date : '02-12-18',
+                    date : '11-05-20',
                     value : 45
                 }
             },
             'HBA1C' : {
                 current : {
-                    date : '18-08-20',
+                    date : '12-08-20',
                     value : 70
                 },
                 previous : {
-                    date : '22-11-17',
+                    date : '11-05-20',
                     value : 54
                 }
             },
@@ -48,17 +49,17 @@ const record = [
                     value : 87
                 },
                 previous : {
-                    date : '17-01-10',
+                    date : '11-05-20',
                     value : 23
                 }
             },
             'AST' : {
                 current : {
-                    date : '04-10-20',
+                    date : '12-08-20',
                     value : 45
                 },
                 previous : {
-                    date : '24-02-16',
+                    date : '11-05-20',
                     value : 54
                 }
             }

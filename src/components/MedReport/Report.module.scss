@@ -19,6 +19,9 @@
              -20px 20px 60px #ffffff;
         border-radius: 10px;
         overflow : auto;
+        .UserAreaPhone{
+            display : none;
+        }
         .Top{
             width : 100%;
             padding : 0px 20px;
@@ -26,10 +29,61 @@
             align-items: center;
             min-height : 100px;
             img{
-                height : 40%;
+                height : 40px;
+            }
+            .UserAreaDesktop{
+                margin-left : 2%;
+                height : 50px;
+                display : flex;
+                align-items: center;
+                padding : 2px;
+                border-radius: 5px;
+                justify-self: flex-end;
+                .PrescriptionDetails{
+                    max-width : 220px;
+                    display : flex;
+                    flex-wrap : wrap;
+                    // background-color: #cfdff1;
+                    border-radius : 5px;
+                    height : 100%;
+                    overflow : auto;
+                    padding : 2px 2px;
+                    background-color : #e9f3fe;
+
+                    .PrescriptionItem{
+                        // background-color : white;
+                        border : solid 1px #0075f6;
+                        color : #0075f6;
+                        font-size : 0.8rem;
+                        font-weight: 600;
+                        padding : 2px 5px;
+                        border-radius : 5px;
+                        margin-left : 5px;
+                        margin-top : 2px;
+                    }
+                }
+                .UserDetails{
+                    margin-left : 2%;
+                    width : auto;
+                    height : 100%;
+                    display : flex;
+                    align-items: center;
+                    i{
+                        font-size : 2rem;
+                        margin-left : 10px;
+
+                    }
+                    .UserName{
+                        width : 100px; 
+                        color : rgb(93, 93, 93);
+                        font-weight : 600;
+                        font-size : 1.2rem;
+                        margin-left : 10px;
+                    }
+                }
             }
             .Select{
-                margin-left : 40px;
+                margin-left : 5%;
                 select{
                     width : 150px;
                     height : 45px;
@@ -75,13 +129,27 @@
                     }
                     }
             }
+            .Prescription{
+                padding : 15px 20px;
+                border : none;
+                background-color : #0075f6;
+                color : white;
+                font-weight: 600;
+                border-radius : 5px;
+                margin-left : 4%;
+                transition : all 0.2s;
+                &:hover{
+                    cursor: pointer;
+                    background-color : #005dc0;
+                }
+            }
             .LabelFilter{
                 width : 45px;
                 height : 45px;
                 background-color : white;
                 border : 1px solid #043c7024;
                 border-radius : 5px;
-                margin-left : 40px;
+                margin-left : 2%;
                 display : flex;
                 flex-direction: column;
                 justify-content: center;
@@ -116,7 +184,7 @@
                 padding : 15px 30px;
                 border : none;
                 border-radius: 5px;
-                margin-left : 10px;
+                margin-left : 2%;
                 transition : all 0.2s;
                 &:hover{
                     cursor: pointer;
@@ -144,11 +212,68 @@
         padding : 10px 10px;
         .Report{
             padding : 10px 5px;
+            .UserAreaPhone{
+                width : 100%;
+                height : 50px;
+                display : flex;
+                align-items: center;
+                padding : 2px;
+                border-radius: 5px;
+                justify-self: flex-end;
+                background-color : #0075f6;
+                .PrescriptionDetails{
+                    max-width : 220px;
+                    display : flex;
+                    flex-wrap : wrap;
+                    // background-color: #cfdff1;
+                    border-radius : 5px;
+                    height : 100%;
+                    overflow : auto;
+                    padding : 2px 2px;
+                    background-color : #e9f3fe;
+
+                    .PrescriptionItem{
+                        // background-color : white;
+                        border : solid 1px #0075f6;
+                        color : #0075f6;
+                        font-size : 0.8rem;
+                        font-weight: 600;
+                        padding : 2px 5px;
+                        border-radius : 5px;
+                        margin-left : 5px;
+                        margin-top : 2px;
+                    }
+                }
+                .UserDetails{
+                    margin-left : 2%;
+                    width : auto;
+                    height : 100%;
+                    display : flex;
+                    align-items: center;
+                    i{
+                        font-size : 2rem;
+                        margin-left : 10px;
+
+                    }
+                    .UserName{
+                        width : 100px; 
+                        color : white;
+                        font-weight : 600;
+                        font-size : 1.2rem;
+                        margin-left : 10px;
+                    }
+                }
+            }
             .Top{
+                .UserAreaDesktop{
+                    display : none;
+                    width : 100%;
+                }
                 padding : 0px 5px;
                 flex-wrap: wrap;
                 justify-content: center;
                 min-height: auto;
+                margin-bottom : 10px;
                 img{
                     height : auto;
                     width : 70%;

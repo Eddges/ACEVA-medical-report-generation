@@ -10,9 +10,13 @@ import ReportFields from '../ReportFields/ReportFields'
 
 class MedReport extends React.Component{
 
+    state = {
+        showCurrent : 0
+    }
+
     render(){
 
-        const currUser = 'Epic'
+        const currUser = 'John Doe'
         const userInfo = record.find(user => {
             return user.user === currUser
         })
@@ -53,12 +57,13 @@ class MedReport extends React.Component{
                             <input placeholder="Search Record" />
                         </div> */}
 
-                        <div className={classes.Select}>
+                        {/* <div className={classes.Select}>
                             <select>
                                 <option>Report</option>
                                 <option>Supplements</option>
                             </select>
-                        </div>
+                        </div> */}
+                        <button className={classes.Prescription}>Prescription</button>
 
                         <div className={classes.LabelFilter}>
                             <i className="fas fa-eye" style={{'color' : '#0075f6'}}></i>
@@ -73,10 +78,41 @@ class MedReport extends React.Component{
                             }}
                             content={() => this.componentRef}
                             />
+
+                        <div className={classes.UserAreaDesktop}>
+
+                            <div className={classes.UserDetails}>
+                                <i className="fas fa-user-circle" style={{'color' : 'grey'}}></i>
+                                <span className={classes.UserName}>{currUser}</span>
+                            </div>
+
+                            <div className={classes.PrescriptionDetails}>
+                                {userInfo.prescription.map(iterator => (
+                                    <span className={classes.PrescriptionItem}>{iterator}</span>
+                                ))}
+                            </div>
+
+                        </div>
                     </div>
                     
                     <div className={classes.Mid}>
                         <ReportFields ref={el => (this.componentRef = el)} mainArray={mainArray} />
+                    </div>
+
+                    
+                    <div className={classes.UserAreaPhone}>
+
+                        <div className={classes.UserDetails}>
+                            <i className="fas fa-user-circle" style={{'color' : 'white'}}></i>
+                            <span className={classes.UserName}>{currUser}</span>
+                        </div>
+
+                        <div className={classes.PrescriptionDetails}>
+                            {userInfo.prescription.map(iterator => (
+                                <span className={classes.PrescriptionItem}>{iterator}</span>
+                            ))}
+                        </div>
+
                     </div>
 
                 </div>

@@ -39,6 +39,10 @@
   overflow: auto;
 }
 
+.Container .Report .UserAreaPhone {
+  display: none;
+}
+
 .Container .Report .Top {
   width: 100%;
   padding: 0px 20px;
@@ -52,11 +56,75 @@
 }
 
 .Container .Report .Top img {
-  height: 40%;
+  height: 40px;
+}
+
+.Container .Report .Top .UserAreaDesktop {
+  margin-left: 2%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px;
+  border-radius: 5px;
+  justify-self: flex-end;
+}
+
+.Container .Report .Top .UserAreaDesktop .PrescriptionDetails {
+  max-width: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 5px;
+  height: 100%;
+  overflow: auto;
+  padding: 2px 2px;
+  background-color: #e9f3fe;
+}
+
+.Container .Report .Top .UserAreaDesktop .PrescriptionDetails .PrescriptionItem {
+  border: solid 1px #0075f6;
+  color: #0075f6;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+.Container .Report .Top .UserAreaDesktop .UserDetails {
+  margin-left: 2%;
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Report .Top .UserAreaDesktop .UserDetails i {
+  font-size: 2rem;
+  margin-left: 10px;
+}
+
+.Container .Report .Top .UserAreaDesktop .UserDetails .UserName {
+  width: 100px;
+  color: #5d5d5d;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-left: 10px;
 }
 
 .Container .Report .Top .Select {
-  margin-left: 40px;
+  margin-left: 5%;
 }
 
 .Container .Report .Top .Select select {
@@ -114,13 +182,30 @@
   background-color: #043c7007;
 }
 
+.Container .Report .Top .Prescription {
+  padding: 15px 20px;
+  border: none;
+  background-color: #0075f6;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-left: 4%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.Container .Report .Top .Prescription:hover {
+  cursor: pointer;
+  background-color: #005dc0;
+}
+
 .Container .Report .Top .LabelFilter {
   width: 45px;
   height: 45px;
   background-color: white;
   border: 1px solid #043c7024;
   border-radius: 5px;
-  margin-left: 40px;
+  margin-left: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,7 +253,7 @@
   padding: 15px 30px;
   border: none;
   border-radius: 5px;
-  margin-left: 10px;
+  margin-left: 2%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -201,6 +286,65 @@
   .Container .Report {
     padding: 10px 5px;
   }
+  .Container .Report .UserAreaPhone {
+    width: 100%;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2px;
+    border-radius: 5px;
+    justify-self: flex-end;
+    background-color: #0075f6;
+  }
+  .Container .Report .UserAreaPhone .PrescriptionDetails {
+    max-width: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-radius: 5px;
+    height: 100%;
+    overflow: auto;
+    padding: 2px 2px;
+    background-color: #e9f3fe;
+  }
+  .Container .Report .UserAreaPhone .PrescriptionDetails .PrescriptionItem {
+    border: solid 1px #0075f6;
+    color: #0075f6;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 2px;
+  }
+  .Container .Report .UserAreaPhone .UserDetails {
+    margin-left: 2%;
+    width: auto;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Container .Report .UserAreaPhone .UserDetails i {
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+  .Container .Report .UserAreaPhone .UserDetails .UserName {
+    width: 100px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
   .Container .Report .Top {
     padding: 0px 5px;
     -ms-flex-wrap: wrap;
@@ -209,6 +353,11 @@
         -ms-flex-pack: center;
             justify-content: center;
     min-height: auto;
+    margin-bottom: 10px;
+  }
+  .Container .Report .Top .UserAreaDesktop {
+    display: none;
+    width: 100%;
   }
   .Container .Report .Top img {
     height: auto;
