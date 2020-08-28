@@ -5,6 +5,7 @@ import record from '../../data/record'
 import ref from '../../data/ref'
 import ReactToPrint from 'react-to-print';
 import ReportFields from '../ReportFields/ReportFields'
+import Portal from '../Portal/Portal';
 
 
 
@@ -63,7 +64,8 @@ class MedReport extends React.Component{
                                 <option>Supplements</option>
                             </select>
                         </div> */}
-                        <button className={classes.Prescription}>Prescription</button>
+                        {/* <button className={classes.Prescription}>Prescription</button> */}
+                        <Portal/>
 
                         <div className={classes.LabelFilter}>
                             <i className="fas fa-eye" style={{'color' : '#0075f6'}}></i>

@@ -1,0 +1,21 @@
+.list {
+    display: flex;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(76, 129, 241);
+    color: white;
+    margin: 1em;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+
+}
+
+.liscon {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
