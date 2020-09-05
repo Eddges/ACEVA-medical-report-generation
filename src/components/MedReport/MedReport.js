@@ -154,11 +154,13 @@ class MedReport extends React.Component{
 
 
                         <ReactToPrint
+                            
                             trigger={() => {
                                 // NOTE: could just as easily return <SomeComponent />. Do NOT pass an `onClick` prop
                                 // to the root node of the returned component as it will be overwritten.
                                 return <button className = {classes.PDF}>Save as PDF</button>;
                             }}
+                            pageStyle='@page { size: A5; margin: 0mm; width : 100%; } @media print { body { -webkit-print-color-adjust: exact; padding: 40px !important; } }'
                             content={() => this.componentRef}
                         />
 
