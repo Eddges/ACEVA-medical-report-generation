@@ -1,6 +1,10 @@
+import MedReport from "../components/MedReport/MedReport"
+
 const record = [
     {
         user : "John Doe",
+        age : 35,
+        gender : 'M',
         prescription : ['Vitamin 1 200mg', 'Vitamin 2 B12 Complex', 'Vitamin 3 Random Name', 'Vitamin 4 Name'],
         report : {
             'RBC' : {

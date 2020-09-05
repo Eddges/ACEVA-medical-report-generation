@@ -43,6 +43,98 @@
   display: none;
 }
 
+.Container .Report .UserAreaDesktop {
+  margin-left: 40px;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  background-color: #e9f3fe;
+}
+
+.Container .Report .UserAreaDesktop .PrescriptionDetails {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 5px;
+  height: 100%;
+  overflow: auto;
+  padding: 2px 2px;
+}
+
+.Container .Report .UserAreaDesktop .PrescriptionDetails .PrescriptionItem {
+  background-color: #0075f6;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+.Container .Report .UserAreaDesktop .UserDetails {
+  padding: 10px 5px;
+  width: 50%;
+  border-radius: 5px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Container .Report .UserAreaDesktop .UserDetails i {
+  font-size: 2rem;
+  margin-left: 10px;
+  color: #0075f6;
+  border-radius: 50%;
+  background-color: #0075f6;
+}
+
+.Container .Report .UserAreaDesktop .UserDetails .UserName {
+  color: #0075f6;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+.Container .Report .UserAreaDesktop .UserDetails .UserAge {
+  font-size: 1rem;
+  margin-left: 18px;
+  font-weight: 600;
+  color: #444444;
+}
+
+.Container .Report .UserAreaDesktop .UserDetails .UserGender {
+  font-size: 1rem;
+  margin-left: 18px;
+  font-weight: 600;
+  color: #444444;
+}
+
 .Container .Report .Top {
   width: 100%;
   padding: 0px 20px;
@@ -57,69 +149,6 @@
 
 .Container .Report .Top img {
   height: 40px;
-}
-
-.Container .Report .Top .UserAreaDesktop {
-  margin-left: 2%;
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 5px;
-  justify-self: flex-end;
-}
-
-.Container .Report .Top .UserAreaDesktop .PrescriptionDetails {
-  max-width: 280px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  border-radius: 5px;
-  height: 100%;
-  overflow: auto;
-  padding: 2px 2px;
-  background-color: #e9f3fe;
-}
-
-.Container .Report .Top .UserAreaDesktop .PrescriptionDetails .PrescriptionItem {
-  border: solid 1px #0075f6;
-  color: #0075f6;
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 2px 5px;
-  border-radius: 5px;
-  margin-left: 5px;
-  margin-top: 2px;
-}
-
-.Container .Report .Top .UserAreaDesktop .UserDetails {
-  margin-left: 2%;
-  width: auto;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Container .Report .Top .UserAreaDesktop .UserDetails i {
-  font-size: 2rem;
-  margin-left: 10px;
-}
-
-.Container .Report .Top .UserAreaDesktop .UserDetails .UserName {
-  width: 100px;
-  color: #5d5d5d;
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-left: 10px;
 }
 
 .Container .Report .Top .Select {
@@ -181,87 +210,6 @@
   background-color: #043c7007;
 }
 
-.Container .Report .Top .Prescription {
-  padding: 15px 20px;
-  border: none;
-  background-color: #0075f6;
-  color: white;
-  font-weight: 600;
-  border-radius: 5px;
-  margin-left: 4%;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.Container .Report .Top .Prescription:hover {
-  cursor: pointer;
-  background-color: #005dc0;
-}
-
-.Container .Report .Top .LabelFilter {
-  width: 45px;
-  height: 45px;
-  background-color: white;
-  border: 1px solid #043c7024;
-  border-radius: 5px;
-  margin-left: 2%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.Container .Report .Top .LabelFilter i {
-  font-size: 15px;
-}
-
-.Container .Report .Top .LabelFilter .VerticalLine {
-  width: 15px;
-  height: 2px;
-  margin-top: 2px;
-  background-color: #0075f6;
-}
-
-.Container .Report .Top .LabelFilter .Filter {
-  width: 10px;
-  height: 10px;
-  background-color: #0075f6;
-  border-radius: 50%;
-}
-
-.Container .Report .Top .LabelFilter:hover, .Container .Report .Top .LabelFilter:focus {
-  cursor: pointer;
-  background-color: #043c7007;
-}
-
-.Container .Report .Top .PDF {
-  background-color: #0075f6;
-  color: white;
-  font-weight: 600;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 5px;
-  margin-left: 2%;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.Container .Report .Top .PDF:hover {
-  cursor: pointer;
-  background-color: #005dc0;
-}
-
 .Container .Report .Mid {
   width: 100%;
   border-radius: 10px;
@@ -278,6 +226,117 @@
   overflow: auto;
 }
 
+.Container .Report .Controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0px;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  background-color: #0075f6;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.Container .Report .Controls .Prescription {
+  height: 40px;
+  margin: 0px;
+  border-radius: 25px;
+  background-color: white;
+  border: none;
+  color: #0075f6;
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.Container .Report .Controls .Prescription:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.Container .Report .Controls .LabelFilter {
+  margin: 0px;
+  background-color: transparent;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.Container .Report .Controls .LabelFilter .FilterText {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+.Container .Report .Controls .LabelFilter:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.Container .Report .Controls .PDF {
+  height: 50px;
+  width: 150px;
+  margin: 0px;
+  background-color: transparent;
+  border: none;
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.Container .Report .Controls .PDF:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
 @media (max-width: 576px) {
   .Container {
     padding: 10px 10px;
@@ -286,36 +345,43 @@
     padding: 10px 5px;
   }
   .Container .Report .UserAreaPhone {
+    margin-top: 20px;
     width: 100%;
-    height: 90px;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 2px;
     border-radius: 5px;
     justify-self: flex-end;
-    background-color: #0075f6;
   }
   .Container .Report .UserAreaPhone .PrescriptionDetails {
-    max-width: 220px;
+    margin-top: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     border-radius: 5px;
     height: 100%;
     overflow: auto;
     padding: 2px 2px;
-    background-color: #e9f3fe;
   }
   .Container .Report .UserAreaPhone .PrescriptionDetails .PrescriptionItem {
     border: solid 1px #0075f6;
+    background-color: #0075f6;
     color: #0075f6;
-    font-size: 0.8rem;
+    color: #fff;
+    font-size: 0.6rem;
     font-weight: 600;
     padding: 2px 5px;
     border-radius: 5px;
@@ -323,8 +389,9 @@
     margin-top: 2px;
   }
   .Container .Report .UserAreaPhone .UserDetails {
-    margin-left: 2%;
-    width: auto;
+    padding: 10px 5px;
+    width: 100%;
+    border-radius: 5px;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -332,17 +399,40 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background-color: #e9f3fe;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .Container .Report .UserAreaPhone .UserDetails i {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-left: 10px;
+    color: #0075f6;
+    border-radius: 50%;
+    background-color: #0075f6;
   }
   .Container .Report .UserAreaPhone .UserDetails .UserName {
-    width: 100px;
-    color: white;
+    color: #0075f6;
     font-weight: 600;
-    font-size: 1.2rem;
-    margin-left: 10px;
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+  .Container .Report .UserAreaPhone .UserDetails .UserAge {
+    font-size: 0.9rem;
+    margin-left: 12px;
+    font-weight: 600;
+    color: #444444;
+  }
+  .Container .Report .UserAreaPhone .UserDetails .UserGender {
+    font-size: 0.9rem;
+    margin-left: 12px;
+    font-weight: 600;
+    color: #444444;
+  }
+  .Container .Report .Mid {
+    margin-bottom: 40px;
   }
   .Container .Report .Top {
     padding: 0px 5px;
@@ -374,17 +464,108 @@
     height: 40px;
     width: 100%;
   }
-  .Container .Report .Top .LabelFilter {
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .Container .Report .Controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    background-color: #0075f6;
+    border-radius: 0px;
   }
-  .Container .Report .Top .PDF {
-    width: 30%;
+  .Container .Report .Controls .Prescription {
+    height: 40px;
+    margin: 0px;
+    border-radius: 25px;
+    background-color: white;
+    border: none;
+    color: #0075f6;
+    width: 33%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+  .Container .Report .Controls .LabelFilter {
+    margin: 0px;
+    background-color: transparent;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 33%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
+  .Container .Report .Controls .LabelFilter .FilterText {
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
     margin-left: 10px;
+  }
+  .Container .Report .Controls .PDF {
+    height: 50px;
+    width: 150px;
+    margin: 0px;
+    background-color: transparent;
+    border: none;
+    width: 33%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-height: 750px) {
+  .Container .Report .Top .UserAreaPhone {
     margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 14px 10px;
+  }
+  .Container .Report .Top .UserAreaPhone .UserDetails {
+    padding: 8px 5px;
+  }
+  .Container .Report .Top .UserAreaPhone .UserDetails i {
+    font-size: 1.5rem;
+  }
+  .Container .Report .Top .UserAreaPhone .UserDetails .UserName {
+    font-size: 1rem;
+  }
+  .Container .Report .Top .UserAreaPhone .UserDetails .UserAge {
+    font-size: 0.8rem;
+  }
+  .Container .Report .Top .UserAreaPhone .UserDetails .UserGender {
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=Report.module.css.map */

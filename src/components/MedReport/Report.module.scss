@@ -22,6 +22,80 @@
         .UserAreaPhone{
             display : none;
         }
+        .UserAreaDesktop{
+            margin-left : 40px;
+            // margin-top : 20px;
+            width : 100%;
+            height : auto;
+            display : flex;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 5px;
+            // justify-self: flex-end;
+            background-color : #e9f3fe;
+            .PrescriptionDetails{
+                // max-width : 90%;
+                // margin-top : 5px;
+                width : 50%;
+                display : flex;
+                justify-content: flex-start;
+                flex-wrap : wrap;
+                // background-color: #cfdff1;
+                border-radius : 5px;
+                height : 100%;
+                overflow : auto;
+                padding : 2px 2px;
+
+                .PrescriptionItem{
+                    background-color : #0075f6;
+                    color : #fff;
+                    font-size : 0.7rem;
+                    font-weight: 600;
+                    padding : 3px 8px;
+                    border-radius : 5px;
+                    margin-left : 5px;
+                    margin-top : 2px;
+                }
+            }
+            .UserDetails{
+                // margin-left : 2%;
+                padding : 10px 5px;
+                width : 50%;
+                border-radius : 5px;
+                height : 100%;
+                display : flex;
+                align-items: center;
+                justify-content: flex-start;
+                // background-color : coral;
+                flex-wrap : wrap;
+                i{
+                    font-size : 2rem;
+                    margin-left : 10px;
+                    color : #0075f6;
+                    border-radius : 50%;
+                    background-color : #0075f6;
+                }
+                .UserName{
+                    // width : 100px; 
+                    color : #0075f6;
+                    font-weight : 600;
+                    font-size : 1.2rem;
+                    margin-left : 5px;
+                }
+                .UserAge{
+                    font-size : 1rem;
+                    margin-left : 18px;
+                    font-weight: 600;
+                    color : rgb(68, 68, 68);
+                }
+                .UserGender{
+                    font-size : 1rem;
+                    margin-left : 18px;
+                    font-weight: 600;
+                    color : rgb(68, 68, 68);
+                }
+            }
+        }
         .Top{
             width : 100%;
             padding : 0px 20px;
@@ -31,57 +105,57 @@
             img{
                 height : 40px;
             }
-            .UserAreaDesktop{
-                margin-left : 2%;
-                height : 70px;
-                display : flex;
-                align-items: center;
-                // padding : 2px;
-                border-radius: 5px;
-                justify-self: flex-end;
-                .PrescriptionDetails{
-                    max-width : 280px;
-                    display : flex;
-                    flex-wrap : wrap;
-                    // background-color: #cfdff1;
-                    border-radius : 5px;
-                    height : 100%;
-                    overflow : auto;
-                    padding : 2px 2px;
-                    background-color : #e9f3fe;
+            // .UserAreaDesktop{
+            //     margin-left : 2%;
+            //     height : 70px;
+            //     display : flex;
+            //     align-items: center;
+            //     // padding : 2px;
+            //     border-radius: 5px;
+            //     justify-self: flex-end;
+            //     .PrescriptionDetails{
+            //         max-width : 280px;
+            //         display : flex;
+            //         flex-wrap : wrap;
+            //         // background-color: #cfdff1;
+            //         border-radius : 5px;
+            //         height : 100%;
+            //         overflow : auto;
+            //         padding : 2px 2px;
+            //         background-color : #e9f3fe;
 
-                    .PrescriptionItem{
-                        // background-color : white;
-                        border : solid 1px #0075f6;
-                        color : #0075f6;
-                        font-size : 0.8rem;
-                        font-weight: 600;
-                        padding : 2px 5px;
-                        border-radius : 5px;
-                        margin-left : 5px;
-                        margin-top : 2px;
-                    }
-                }
-                .UserDetails{
-                    margin-left : 2%;
-                    width : auto;
-                    height : 100%;
-                    display : flex;
-                    align-items: center;
-                    i{
-                        font-size : 2rem;
-                        margin-left : 10px;
+            //         .PrescriptionItem{
+            //             // background-color : white;
+            //             border : solid 1px #0075f6;
+            //             color : #0075f6;
+            //             font-size : 0.8rem;
+            //             font-weight: 600;
+            //             padding : 2px 5px;
+            //             border-radius : 5px;
+            //             margin-left : 5px;
+            //             margin-top : 2px;
+            //         }
+            //     }
+            //     .UserDetails{
+            //         margin-left : 2%;
+            //         width : auto;
+            //         height : 100%;
+            //         display : flex;
+            //         align-items: center;
+            //         i{
+            //             font-size : 2rem;
+            //             margin-left : 10px;
 
-                    }
-                    .UserName{
-                        width : 100px; 
-                        color : rgb(93, 93, 93);
-                        font-weight : 600;
-                        font-size : 1.2rem;
-                        margin-left : 10px;
-                    }
-                }
-            }
+            //         }
+            //         .UserName{
+            //             width : 100px; 
+            //             color : rgb(93, 93, 93);
+            //             font-weight : 600;
+            //             font-size : 1.2rem;
+            //             margin-left : 10px;
+            //         }
+            //     }
+            // }
             .Select{
                 margin-left : 5%;
                 select{
@@ -129,68 +203,68 @@
                     }
                     }
             }
-            .Prescription{
-                padding : 15px 20px;
-                border : none;
-                background-color : #0075f6;
-                color : white;
-                font-weight: 600;
-                border-radius : 5px;
-                margin-left : 4%;
-                transition : all 0.2s;
-                &:hover{
-                    cursor: pointer;
-                    background-color : #005dc0;
-                }
-            }
-            .LabelFilter{
-                width : 45px;
-                height : 45px;
-                background-color : white;
-                border : 1px solid #043c7024;
-                border-radius : 5px;
-                margin-left : 2%;
-                display : flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition : all 0.2s;
-                i{
-                    // width : 15px;
-                    font-size : 15px;
-                }
-                .VerticalLine{
-                    width : 15px;
-                    height : 2px;
-                    margin-top : 2px;
-                    background-color : #0075f6;
-                }
-                .Filter{
-                    width : 10px;
-                    height : 10px;
-                    background-color : #0075f6;
-                    border-radius : 50%;
-                }
+            // .Prescription{
+            //     padding : 15px 20px;
+            //     border : none;
+            //     background-color : #0075f6;
+            //     color : white;
+            //     font-weight: 600;
+            //     border-radius : 5px;
+            //     margin-left : 4%;
+            //     transition : all 0.2s;
+            //     &:hover{
+            //         cursor: pointer;
+            //         background-color : #005dc0;
+            //     }
+            // }
+            // .LabelFilter{
+            //     width : 45px;
+            //     height : 45px;
+            //     background-color : white;
+            //     border : 1px solid #043c7024;
+            //     border-radius : 5px;
+            //     margin-left : 2%;
+            //     display : flex;
+            //     flex-direction: column;
+            //     justify-content: center;
+            //     align-items: center;
+            //     transition : all 0.2s;
+            //     i{
+            //         // width : 15px;
+            //         font-size : 15px;
+            //     }
+            //     .VerticalLine{
+            //         width : 15px;
+            //         height : 2px;
+            //         margin-top : 2px;
+            //         background-color : #0075f6;
+            //     }
+            //     .Filter{
+            //         width : 10px;
+            //         height : 10px;
+            //         background-color : #0075f6;
+            //         border-radius : 50%;
+            //     }
                 
-                &:hover, &:focus{
-                    cursor: pointer;
-                    background-color : #043c7007;
-                }
-            }
-            .PDF {
-                background-color : #0075f6;
-                color : white;
-                font-weight: 600;
-                padding : 15px 30px;
-                border : none;
-                border-radius: 5px;
-                margin-left : 2%;
-                transition : all 0.2s;
-                &:hover{
-                    cursor: pointer;
-                    background-color: #005dc0;
-                }
-            }
+            //     &:hover, &:focus{
+            //         cursor: pointer;
+            //         background-color : #043c7007;
+            //     }
+            // }
+            // .PDF {
+            //     background-color : #0075f6;
+            //     color : white;
+            //     font-weight: 600;
+            //     padding : 15px 30px;
+            //     border : none;
+            //     border-radius: 5px;
+            //     margin-left : 2%;
+            //     transition : all 0.2s;
+            //     &:hover{
+            //         cursor: pointer;
+            //         background-color: #005dc0;
+            //     }
+            // }
         }
         .Mid{
             width : 100%;
@@ -202,9 +276,95 @@
             align-items: flex-start;
             overflow : auto;
         }
+        .Controls{
+            display : flex;
+            // position : fixed;
+            bottom : 0px;
+            height : auto;
+            align-items: center;
+            justify-content: space-between;
+            width : 50%;
+            background-color: #0075f6;
+            margin-top : 10px;
+            border-radius : 5px;
+            .Prescription{
+                height : 40px;
+                margin : 0px;
+                border-radius : 25px;
+                background-color: white;
+                // background-color : coral;
+                border : none;
+                color : #0075f6;
+                width : 33%;
+                display : flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 800;
+                font-size : 0.9rem;
+                transition : all 0.2s;
+                &:hover{
+                    cursor: pointer;
+                    transform : translateY(-2px);
+                }
+            }
+            .LabelFilter{
+                margin : 0px;
+                background-color: transparent;
+                flex-direction: row;
+                // margin-left : 20px;
+                // background-color : green;
+                width : 33%;
+                display : flex;
+                align-items: center;
+                justify-content: center;
+                height : 100%;
+                transition : all 0.2s;
+                .FilterText{
+                    color : white;
+                    font-weight: 600;
+                    font-size : 0.9rem;
+                    margin-left : 10px;
+                }
+                &:hover{
+                    cursor: pointer;
+                    transform : translateY(-2px);
+                }
+            }
+            .PDF{
+                height : 50px;
+                width : 150px;
+                margin : 0px;
+                background-color: transparent;
+                // background-color : red;
+                border : none;
+                width : 33%;
+                display : flex;
+                align-items: center;
+                justify-content: center;
+                color : white;
+                font-weight: 600;
+                font-size : 0.9rem;
+                transition : all 0.2s;
+                &:hover{
+                    cursor: pointer;
+                    transform : translateY(-2px);
+                }
+            }
+        }
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media(max-width : 576px) {
@@ -213,30 +373,35 @@
         .Report{
             padding : 10px 5px;
             .UserAreaPhone{
+                margin-top : 20px;
                 width : 100%;
-                height : 90px;
+                height : auto;
                 display : flex;
+                flex-direction: column;
                 align-items: center;
-                padding : 2px;
                 border-radius: 5px;
                 justify-self: flex-end;
-                background-color : #0075f6;
+                // background-color : #0075f6;
                 .PrescriptionDetails{
-                    max-width : 220px;
+                    // max-width : 90%;
+                    margin-top : 5px;
                     display : flex;
+                    justify-content: flex-start;
                     flex-wrap : wrap;
                     // background-color: #cfdff1;
                     border-radius : 5px;
                     height : 100%;
                     overflow : auto;
                     padding : 2px 2px;
-                    background-color : #e9f3fe;
+                    
 
                     .PrescriptionItem{
                         // background-color : white;
                         border : solid 1px #0075f6;
+                        background-color : #0075f6;
                         color : #0075f6;
-                        font-size : 0.8rem;
+                        color : #fff;
+                        font-size : 0.6rem;
                         font-weight: 600;
                         padding : 2px 5px;
                         border-radius : 5px;
@@ -245,24 +410,46 @@
                     }
                 }
                 .UserDetails{
-                    margin-left : 2%;
-                    width : auto;
+                    // margin-left : 2%;
+                    padding : 10px 5px;
+                    width : 100%;
+                    border-radius : 5px;
                     height : 100%;
                     display : flex;
                     align-items: center;
+                    justify-content: flex-start;
+                    background-color : #e9f3fe;
+                    flex-wrap : wrap;
                     i{
-                        font-size : 2rem;
+                        font-size : 1.7rem;
                         margin-left : 10px;
-
+                        color : #0075f6;
+                        border-radius : 50%;
+                        background-color : #0075f6;
                     }
                     .UserName{
-                        width : 100px; 
-                        color : white;
+                        // width : 100px; 
+                        color : #0075f6;
                         font-weight : 600;
-                        font-size : 1.2rem;
-                        margin-left : 10px;
+                        font-size : 1rem;
+                        margin-left : 5px;
+                    }
+                    .UserAge{
+                        font-size : 0.9rem;
+                        margin-left : 12px;
+                        font-weight: 600;
+                        color : rgb(68, 68, 68);
+                    }
+                    .UserGender{
+                        font-size : 0.9rem;
+                        margin-left : 12px;
+                        font-weight: 600;
+                        color : rgb(68, 68, 68);
                     }
                 }
+            }
+            .Mid{
+                margin-bottom : 40px;
             }
             .Top{
                 .UserAreaDesktop{
@@ -290,17 +477,135 @@
                         width : 100%;
                     }
                 }
+                // .LabelFilter{
+                //     margin-left : 10px;
+                //     margin-top : 10px;
+                //     margin-bottom : 10px;
+                // }
+                // .PDF{
+                //     width : 30%;
+                //     margin-left : 10px;
+                //     margin-top : 10px;
+                //     margin-bottom : 10px;
+                //     padding : 14px 10px;
+                // }
+
+
+
+                // .Prescription{
+                //     position : fixed;
+                //     bottom : 5px;
+                //     margin : auto;
+                //     bottom : 5px;
+                // }
+                // .LabelFilter{
+                //     position : fixed;
+                //     bottom : 5px;
+                //     left : 20px;
+                // }
+                // .PDF{
+                //     position : fixed;
+                //     bottom : 5px;
+                //     right : 20px;
+                // }
+            
+            }
+
+            .Controls{
+                display : flex;
+                position : fixed;
+                bottom : 0px;
+                height : auto;
+                align-items: center;
+                justify-content: space-between;
+                width : 100%;
+                background-color: #0075f6;
+                border-radius : 0px;
+                .Prescription{
+                    height : 40px;
+                    margin : 0px;
+                    border-radius : 25px;
+                    background-color: white;
+                    // background-color : coral;
+                    border : none;
+                    color : #0075f6;
+                    width : 33%;
+                    display : flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 800;
+                    font-size : 0.9rem;
+                }
                 .LabelFilter{
-                    margin-left : 10px;
-                    margin-top : 10px;
-                    margin-bottom : 10px;
+                    margin : 0px;
+                    background-color: transparent;
+                    flex-direction: row;
+                    // margin-left : 20px;
+                    // background-color : green;
+                    width : 33%;
+                    display : flex;
+                    align-items: center;
+                    justify-content: center;
+                    height : 100%;
+                    .FilterText{
+                        color : white;
+                        font-weight: 600;
+                        font-size : 0.9rem;
+                        margin-left : 10px;
+                    }
                 }
                 .PDF{
-                    width : 30%;
-                    margin-left : 10px;
+                    height : 50px;
+                    width : 150px;
+                    margin : 0px;
+                    background-color: transparent;
+                    // background-color : red;
+                    border : none;
+                    width : 33%;
+                    display : flex;
+                    align-items: center;
+                    justify-content: center;
+                    color : white;
+                    font-weight: 600;
+                    font-size : 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-height : 750px) {
+    .Container{
+        .Report{
+            .Top{
+                .UserAreaPhone{
                     margin-top : 10px;
-                    margin-bottom : 10px;
-                    padding : 14px 10px;
+                    .UserDetails{
+                        padding : 8px 5px;
+                        i{
+                            font-size : 1.5rem;
+                        }
+                        .UserName{
+                            font-size : 1rem;
+                        }
+                        .UserAge{
+                            font-size : 0.8rem;
+                        }
+                        .UserGender{
+                            font-size : 0.8rem;
+                        }
+                    }
                 }
             }
         }

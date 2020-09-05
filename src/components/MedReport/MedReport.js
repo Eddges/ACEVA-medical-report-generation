@@ -5,14 +5,15 @@ import record from '../../data/record'
 import ref from '../../data/ref'
 import ReactToPrint from 'react-to-print';
 import ReportFields from '../ReportFields/ReportFields'
-import Portal from '../Portal/Portal';
+// import Portal from '../Portal/Portal';
 
 
 
 class MedReport extends React.Component{
 
     state = {
-        showCurrent : 0
+        showCurrent : 0,
+        filterState : 0
     }
 
     render(){
@@ -46,6 +47,30 @@ class MedReport extends React.Component{
 
         console.log('mainArray : ', mainArray)
 
+        let eyeColor = '#fff'
+
+        switch (this.state.filterState%4) {
+            case 0 : 
+                eyeColor = '#fff'
+                break
+            case 1 : 
+                eyeColor = 'rgba(255, 0, 0)'
+                break
+            case 2 : 
+                eyeColor = '#f0b802'
+                break
+            case 3 : 
+                eyeColor = 'rgb(9, 160, 54)'
+                break
+        }
+
+        const handleFilterState = () => {
+            this.setState({
+                ...this.state,
+                filterState : this.state.filterState + 1
+            })
+        }
+
         return(
             <div className={classes.Container}>
                 <div className={classes.Report}>
@@ -64,13 +89,69 @@ class MedReport extends React.Component{
                                 <option>Supplements</option>
                             </select>
                         </div> */}
-                        {/* <button className={classes.Prescription}>Prescription</button> */}
-                        <Portal/>
+                        {/* <Portal/> */}
 
-                        <div className={classes.LabelFilter}>
-                            <i className="fas fa-eye" style={{'color' : '#0075f6'}}></i>
-                            <div className={classes.VerticalLine}></div>
+
+
+
+                        <div className={classes.UserAreaDesktop}>
+
+                            <div className={classes.UserDetails}>
+                                <i className="fas fa-user-circle" style={{'color' : 'white'}}></i>
+                                <span className={classes.UserName}>{currUser}</span>
+                                <span className={classes.UserAge}>Age : {userInfo.age}</span>
+                                <span className={classes.UserGender}>Gender : {userInfo.gender}</span>
+
+                            </div>
+
+                            <div className={classes.PrescriptionDetails}>
+                                {userInfo.prescription.map((iterator, index) => (
+                                    <span key={index} className={classes.PrescriptionItem}>{iterator}</span>
+                                ))}
+                            </div>
+
                         </div>
+
+
+
+                        <div className={classes.UserAreaPhone}>
+
+                            <div className={classes.UserDetails}>
+                                <i className="fas fa-user-circle" style={{'color' : 'white'}}></i>
+                                <span className={classes.UserName}>{currUser}</span>
+                                <span className={classes.UserAge}>Age : {userInfo.age}</span>
+                                <span className={classes.UserGender}>Gender : {userInfo.gender}</span>
+
+                            </div>
+
+                            <div className={classes.PrescriptionDetails}>
+                                {userInfo.prescription.map((iterator, index) => (
+                                    <span key={index} className={classes.PrescriptionItem}>{iterator}</span>
+                                ))}
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </div>
+                    
+                    <div className={classes.Mid}>
+                        <ReportFields filterState={this.state.filterState} ref={el => (this.componentRef = el)} mainArray={mainArray} />
+                    </div>
+
+                    <div className={classes.Controls}>
+
+                        <div className={classes.LabelFilter} onClick={handleFilterState} >
+                            <i className="fas fa-eye" style={{'color' : eyeColor}}></i>
+                            {/* <div className={classes.VerticalLine}></div> */}
+                            <span className={classes.FilterText}>Filter</span>
+                        </div>
+
+                        <button className={classes.Prescription}>Prescription</button>
+
 
                         <ReactToPrint
                             trigger={() => {
@@ -79,43 +160,10 @@ class MedReport extends React.Component{
                                 return <button className = {classes.PDF}>Save as PDF</button>;
                             }}
                             content={() => this.componentRef}
-                            />
-
-                        <div className={classes.UserAreaDesktop}>
-
-                            <div className={classes.PrescriptionDetails}>
-                                {userInfo.prescription.map(iterator => (
-                                    <span className={classes.PrescriptionItem}>{iterator}</span>
-                                ))}
-                            </div>
-
-                            <div className={classes.UserDetails}>
-                                <i className="fas fa-user-circle" style={{'color' : 'grey'}}></i>
-                                <span className={classes.UserName}>{currUser}</span>
-                            </div>
-
-                        </div>
-                    </div>
-                    
-                    <div className={classes.Mid}>
-                        <ReportFields ref={el => (this.componentRef = el)} mainArray={mainArray} />
-                    </div>
-
-                    
-                    <div className={classes.UserAreaPhone}>
-
-                        <div className={classes.UserDetails}>
-                            <i className="fas fa-user-circle" style={{'color' : 'white'}}></i>
-                            <span className={classes.UserName}>{currUser}</span>
-                        </div>
-
-                        <div className={classes.PrescriptionDetails}>
-                            {userInfo.prescription.map(iterator => (
-                                <span className={classes.PrescriptionItem}>{iterator}</span>
-                            ))}
-                        </div>
+                        />
 
                     </div>
+
 
                 </div>
                 

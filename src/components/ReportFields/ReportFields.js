@@ -4,6 +4,24 @@ import ReportField from '../ReportField/ReportField'
 
 class ReportFields extends React.Component{
     render(){
+
+        let filterstate = null
+
+        switch (this.props.filterState%4) {
+            case 0 :
+                filterstate = null
+                break
+            case 1 :
+                filterstate = 'RED'
+                break
+            case 2 :
+                filterstate = 'AMBER'
+                break
+            case 3 :
+                filterstate = 'GREEN'
+                break
+        }
+
         return(
             <div className={classes.Mid}>
                 <div className={classes.MidTop}>
@@ -21,16 +39,37 @@ class ReportFields extends React.Component{
                 </div>
 
                 {/* <div className={classes.MidReport}> */}
-                    {this.props.mainArray.map((iterator, index) => {
+                    {filterstate ? 
+                        this.props.mainArray.map((iterator, index) => {
+                            if(iterator.status === filterstate) {
+                                return (
+                                    <ReportField {...iterator} key={index} />
+                                )
+                            }
+                        })
+                     : this.props.mainArray.map((iterator, index) => {
                         return(
                             <ReportField {...iterator} key={index} />
                         )
                     })}
-                    {this.props.mainArray.map((iterator, index) => {
+                    {filterstate ? 
+                        this.props.mainArray.map((iterator, index) => {
+                            if(iterator.status === filterstate) {
+                                return (
+                                    <ReportField {...iterator} key={index} />
+                                )
+                            }
+                        })
+                     : this.props.mainArray.map((iterator, index) => {
                         return(
                             <ReportField {...iterator} key={index} />
                         )
                     })}
+                    {/* {this.props.mainArray.map((iterator, index) => {
+                        return(
+                            <ReportField {...iterator} key={index} />
+                        )
+                    })} */}
                 {/* </div> */}
             </div>
         )
