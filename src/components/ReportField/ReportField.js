@@ -35,10 +35,10 @@ const ReportField = (props) => {
         <div className={classes.Container}>
             <i className={`${classes.Icon} ${icon}`} style={{'color' : bgcol}}></i>
             <span className={`${classes.Item} ${classes.Specific}`} style={{'color' : bgcol}}>{props.specific}</span>
-            <span className={`${classes.Item} ${classes.CurrDate}`}> <span style={{'color' : bgcol}}>{props.currentValue}</span>{props.currentDate}</span>
-            <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span>{props.previousDate}</span>
-            <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span>{props.previousDate}</span>
-            <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span>{props.previousDate}</span>
+            <span className={`${classes.Item} ${classes.CurrDate}`}> <span style={{'color' : bgcol}}>{props.currentValue}</span></span>
+            <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span></span>
+            <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span></span>
+            <span className={`${classes.Item} ${classes.PrevDate}`}><span>{props.previousValue}</span></span>
             {/* <span className={`${classes.Item} ${classes.Status}`} style={{'color' : `${props.status}`}}>{props.status}</span> */}
             <span className={`${classes.Item} ${classes.Reference}`}>{props.rangeLower}-{props.rangeUpper} %</span>
         </div>

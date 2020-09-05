@@ -28,10 +28,10 @@ class ReportFields extends React.Component{
 
                     <i className={`${classes.ItemIcon} ${"fas fa-file-medical"}`} style={{'color' : '#0075f6'}}></i>
                     <span className={`${classes.Item} ${classes.Specific}`}>Field</span>
-                    <span className={classes.Item}>Current</span>
-                    <span className={classes.Item}>Previous 1</span>
-                    <span className={classes.Item}>Previous 2</span>
-                    <span className={classes.Item}>Previous 3</span>
+                    <span className={classes.Item}>Current <span className={classes.FieldDate}>({this.props.userInfo.current})</span></span>
+                    <span className={classes.Item}>Previous 1 <span className={classes.FieldDate}>({this.props.userInfo.previous1})</span></span>
+                    <span className={classes.Item}>Previous 2 <span className={classes.FieldDate}>({this.props.userInfo.previous2})</span></span>
+                    <span className={classes.Item}>Previous 3 <span className={classes.FieldDate}>({this.props.userInfo.previous3})</span></span>
 
                     {/* <span className={classes.Item}>Status</span> */}
                     <span className={classes.Item}>Reference</span>

@@ -58,11 +58,10 @@
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
-  background-color: #e9f3fe;
 }
 
 .Container .Report .UserAreaDesktop .PrescriptionDetails {
-  width: 50%;
+  width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,6 +101,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  background-color: #e9f3fe;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }

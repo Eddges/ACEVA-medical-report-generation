@@ -80,11 +80,12 @@ a{
     border-radius: 2px;
     justify-content: center;
     align-items: center;
-    transition: 0.5s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 .form_parent .form_wrapper .content .btn:hover {
     background-color: #16E4AE;
+    cursor: pointer;
 }
 
 .form_parent .form_wrapper .content .btn p{

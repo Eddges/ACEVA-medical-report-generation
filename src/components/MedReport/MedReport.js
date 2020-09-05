@@ -18,7 +18,7 @@ class MedReport extends React.Component{
 
     render(){
 
-        const currUser = 'John Doe'
+        const currUser = this.props.userName
         const userInfo = record.find(user => {
             return user.user === currUser
         })
@@ -139,7 +139,7 @@ class MedReport extends React.Component{
                     </div>
                     
                     <div className={classes.Mid}>
-                        <ReportFields filterState={this.state.filterState} ref={el => (this.componentRef = el)} mainArray={mainArray} />
+                        <ReportFields filterState={this.state.filterState} ref={el => (this.componentRef = el)} mainArray={mainArray} userInfo={userInfo} />
                     </div>
 
                     <div className={classes.Controls}>

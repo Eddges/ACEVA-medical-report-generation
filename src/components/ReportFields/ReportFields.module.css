@@ -36,6 +36,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Mid .MidTop .Item .FieldDate {
+  margin-left: 5px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #686868;
 }
 
 .Mid .MidTop .Specific {

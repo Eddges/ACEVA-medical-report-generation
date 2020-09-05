@@ -32,11 +32,11 @@
             align-items: center;
             border-radius: 5px;
             // justify-self: flex-end;
-            background-color : #e9f3fe;
+            
             .PrescriptionDetails{
                 // max-width : 90%;
                 // margin-top : 5px;
-                width : 50%;
+                width : 45%;
                 display : flex;
                 justify-content: flex-start;
                 flex-wrap : wrap;
@@ -67,6 +67,7 @@
                 align-items: center;
                 justify-content: flex-start;
                 // background-color : coral;
+                background-color : #e9f3fe;
                 flex-wrap : wrap;
                 i{
                     font-size : 2rem;

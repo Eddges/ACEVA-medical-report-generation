@@ -1,28 +1,61 @@
 import React from 'react';
 import './form.style.css';
 import Chirologo from '../../assets/ChiroHDLogo.png';
-import {NavLink} from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
+import record from '../../data/record'
 
-function FormPage() {
-    return (
-        <div className = "form_parent">
-            <div className = "logo_wrapper">
-                <img src = {Chirologo}/>
-            </div>
-            <div className = "form_wrapper">
-                <div className = "content">
-                    <p>LabCorpID</p>
-                    <input/>
-                    <NavLink to="/form">
-                    <div className = "btn">
-                        <p>Next</p>
-                    </div>
-                    </NavLink>
+class FormPage extends React.Component {
+
+    state = {
+        userID : ''
+    }
+
+    handleUserInput = (e) => {
+        this.setState({
+            userID : e.target.value
+        })
+    }
+
+    handleSubmit = () => {
+        if(this.state.userID==='') {
+            alert('Please fill in a valid LabCorp ID')
+        }
+        else if(this.state.userID) {
+            const user = record.find(user => {
+                return user.user === this.state.userID
+            })
+            if(user) {
+                this.props.userData(user)
+                this.props.history.push('/form')
+            }
+            else {
+                alert('We couldn\'t find any user with this ID. Kindly make sure you have entered correct LabCorp ID')
+            }
+        }
+    }
+
+    render(){
+        return (
+            <div className = "form_parent">
+                <div className = "logo_wrapper">
+                    <img src = {Chirologo} alt="Logo"/>
                 </div>
-               
+                <div className = "form_wrapper">
+                    <div className = "content">
+                        <p>LabCorpID</p>
+                        <input type="text" onChange={(e)=> this.handleUserInput(e)} />
+                        {/* <NavLink to="/form"> */}
+                        <div className = "btn" onClick={() => this.handleSubmit()} >
+                            <p>Next</p>
+                        </div>
+                        {/* </NavLink> */}
+                    </div>
+                   
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
+
 }
 
-export default FormPage;
+export default withRouter(FormPage);

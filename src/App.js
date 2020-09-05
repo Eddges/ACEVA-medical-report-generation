@@ -7,13 +7,24 @@ import MedReport from './components/MedReport/MedReport';
 // import Portal from './components/Portal/Portal'
 
 class App extends React.Component{
+
+    state = {
+        user : null
+    }
+
+    storeUser = (user) => {
+        this.setState({
+            user : user
+        })
+    }
+
     render(){
 
         return(
             <div>
-                {/* <Route path="/" exact component={FormPage} /> */}
-                {/* <Route path="/form" exact component={MedReport} /> */}
-                <MedReport />
+                <Route path="/" exact render={() => <FormPage userData={(user) => this.storeUser(user)} />} />
+                <Route path="/form" exact render={() => <MedReport userName={this.state.user.user} />} />
+                {/* <MedReport /> */}
                 {/* <Portal/> */}
             </div>
         )

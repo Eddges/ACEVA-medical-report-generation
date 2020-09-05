@@ -24,6 +24,14 @@
             font-weight: 600;
             display : flex;
             // background-color: yellow;
+            flex-direction: column;
+            // align-items: center;
+            .FieldDate{
+                margin-left : 5px;
+                font-size : 0.7rem;
+                font-weight: 600;
+                color : #686868;
+            }
         }
         .Specific{
             min-width : 200px;
