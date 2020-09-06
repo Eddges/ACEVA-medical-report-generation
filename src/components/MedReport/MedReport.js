@@ -5,7 +5,7 @@ import record from '../../data/record'
 import ref from '../../data/ref'
 import ReactToPrint from 'react-to-print';
 import ReportFields from '../ReportFields/ReportFields'
-// import Portal from '../Portal/Portal';
+import Portal from '../Portal/Portal';
 
 
 
@@ -150,7 +150,8 @@ class MedReport extends React.Component{
                             <span className={classes.FilterText}>Filter</span>
                         </div>
 
-                        <button className={classes.Prescription}>Prescription</button>
+                        {/* <button className={classes.Prescription}>Prescription</button> */}
+                        <Portal/>
 
 
                         <ReactToPrint

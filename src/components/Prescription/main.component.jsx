@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // import logo from './logo.svg';
-import './main.css';
+import styles from './main.module.css';
 import ListItems from './ListItems';
 
 
@@ -47,9 +47,9 @@ class Main extends Component {
 
   render(){
     return (
-      <div className = "App">
+      <div className = {styles.App} >
         <header>
-          <form id = "pres-form" onSubmit = {this.addItem}>
+          <form className = {styles.pres_form} onSubmit = {this.addItem}>
             {/* <input type = "text" placeholder = "Enter Text"
               value = {this.state.currentItem.text}
               onChange = {this.handleInput} list = "med_name"
@@ -67,11 +67,11 @@ class Main extends Component {
             </button>
           </form>
         </header>
-        <div className = "pills">
+        <div className = {styles.pills}>
          <ListItems items = {this.state.items}/>
         </div>
 
-        <div className="footer">
+        <div className={styles.footer}>
             
         </div>
       

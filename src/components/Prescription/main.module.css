@@ -1,9 +1,4 @@
-body{
-  background-color:  rgb(153, 183, 248, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .App {
   display: flex;
@@ -27,11 +22,12 @@ body{
   align-items: center;
 }
 
-#pres-form select{
+.pres_form select{
   background-color: #fff;
   width: 100%;
   height: 45px;
   margin-top: 1em;
+  /* margin-right: 1; */
   background-color: white;
   border: 1px solid #043c7024;
   border-radius: 5px;
@@ -50,15 +46,15 @@ body{
   transition: all 0.2s;
 }
 
-#pres-form select::placeholder{
+.pres_form select::placeholder{
   color: rgb(114, 110, 110);
 }
 
-#pres-form select:focus{
+.pres_form select:focus{
   outline: none;
 }
 
-#pres-form button {
+.pres_form button {
   width: 40px;
   height: 45px;
   margin-top: 1.2em;
@@ -67,9 +63,10 @@ body{
   border: none;
   background-color:  white;
   color: white;
+  margin-right: 1em;
 }
 
-#pres-form button:focus{
+.pres_form button:focus{
   outline: none;
 }
 

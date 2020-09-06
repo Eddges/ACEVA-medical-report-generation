@@ -4,20 +4,27 @@ import Modal from './Modal';
 const Button_Wrapper_Styles = {
     position: 'relative',
     zIndex:1,
-    height:'50px',
-    width:'120px',
-    display:'flex',
+    height: '40px',
+    margin: '0px',
+    borderRadius: '25px',
+    backgroundColor: 'white',
+    border: 'none',
+    color: '#0075f6',
+    width: '33%',
+    display: 'flex',
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    cursor:'pointer',
+    fontWeight:'900'
 }
 
 const Button_el = {
-    height:'45px',
+    height:'40px',
     width:'110px',
     border:'none',
-    backgroundColor:'#0075f6',
+    backgroundColor:'white',
     fontWeight:600,
-    color:'white',
+    color: '#0075f6',
     marginLeft:'1em'
 
 }
@@ -34,7 +41,7 @@ function Portal() {
     return (
     <>
         <div style = {Button_Wrapper_Styles}>
-            <button style={Button_el} onClick = {() => setIsOpen(true)} >Prescribe</button>
+            <p  onClick = {() => setIsOpen(true)} >Prescribe</p>
         </div>
         <Modal open = {isOpen} onClose = {()=> setIsOpen(false)}/>
         {/* </Modal> */}
