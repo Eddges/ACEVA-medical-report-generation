@@ -78,15 +78,15 @@ const record = [
         age : 66,
         gender : 'F',
         prescription : ['Vitamin 2 1200mg', 'Vitamin C Capsules x10', 'Vitamin D Capsules x15', 'Vitamin E Capsules x5'],
-        current : '12-08-20',
-        previous1 : '11-05-20',
-        previous2 : '23-01-20',
-        previous3 : '19-09-19',
+        current : '15-04-19',
+        previous1 : '18-07-18',
+        previous2 : '12-02-18',
+        previous3 : '27-09-17',
         report : {
             'RBC' : {
                 current : {
-                    date : '12-08-20',
-                    value : 54
+                    date : '15-04-19',
+                    value : 32
                 },
                 previous : {
                     date : '11-05-20',
@@ -96,51 +96,51 @@ const record = [
             'HGB' : {
                 current : {
                     date : '12-08-20',
-                    value : 63
+                    value : 45
                 },
                 previous : {
                     date : '11-05-20',
-                    value : 78
+                    value : 65
                 }
             },
             'GLUCOSE' : {
                 current : {
                     date : '12-08-20',
-                    value : 67
+                    value : 43
                 },
                 previous : {
                     date : '11-05-20',
-                    value : 45
+                    value : 27
                 }
             },
             'HBA1C' : {
                 current : {
                     date : '12-08-20',
-                    value : 70
-                },
-                previous : {
-                    date : '11-05-20',
-                    value : 54
-                }
-            },
-            'TRIGLYCERIDES' : {
-                current : {
-                    date : '12-08-20',
-                    value : 87
+                    value : 78
                 },
                 previous : {
                     date : '11-05-20',
                     value : 23
                 }
             },
-            'AST' : {
+            'TRIGLYCERIDES' : {
                 current : {
                     date : '12-08-20',
-                    value : 45
+                    value : 56
                 },
                 previous : {
                     date : '11-05-20',
-                    value : 54
+                    value : 39
+                }
+            },
+            'AST' : {
+                current : {
+                    date : '12-08-20',
+                    value : 36
+                },
+                previous : {
+                    date : '11-05-20',
+                    value : 76
                 }
             }
         }
