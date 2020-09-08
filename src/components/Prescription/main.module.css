@@ -80,3 +80,10 @@
   margin: 1em;
   height: auto;
 }
+
+
+@media(max-width : 576px){
+  .App{
+    width : 100%;
+  }
+}

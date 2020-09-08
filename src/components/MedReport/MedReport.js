@@ -18,7 +18,8 @@ class MedReport extends React.Component{
 
     render(){
 
-        const currUser = this.props.userName
+        // const currUser = this.props.userName
+        const currUser = 'John Doe'
         const userInfo = record.find(user => {
             return user.user === currUser
         })
@@ -73,23 +74,14 @@ class MedReport extends React.Component{
 
         return(
             <div className={classes.Container}>
+
+                <span className={classes.Heading}>BLOOD TEST REPORT RESULT</span>
                 <div className={classes.Report}>
 
-                    <div className={classes.Top}>
+                    {/* <div className={classes.Top}>
 
                         <img src={Logo} alt="Logo" />
 
-                        {/* <div className={classes.Search}>
-                            <input placeholder="Search Record" />
-                        </div> */}
-
-                        {/* <div className={classes.Select}>
-                            <select>
-                                <option>Report</option>
-                                <option>Supplements</option>
-                            </select>
-                        </div> */}
-                        {/* <Portal/> */}
 
 
 
@@ -136,7 +128,7 @@ class MedReport extends React.Component{
 
 
 
-                    </div>
+                    </div> */}
                     
                     <div className={classes.Mid}>
                         <ReportFields filterState={this.state.filterState} ref={el => (this.componentRef = el)} mainArray={mainArray} userInfo={userInfo} />
@@ -144,11 +136,10 @@ class MedReport extends React.Component{
 
                     <div className={classes.Controls}>
 
-                        <div className={classes.LabelFilter} onClick={handleFilterState} >
+                        {/* <div className={classes.LabelFilter} onClick={handleFilterState} >
                             <i className="fas fa-eye" style={{'color' : eyeColor}}></i>
-                            {/* <div className={classes.VerticalLine}></div> */}
                             <span className={classes.FilterText}>Filter</span>
-                        </div>
+                        </div> */}
 
                         {/* <button className={classes.Prescription}>Prescription</button> */}
                         <Portal/>
