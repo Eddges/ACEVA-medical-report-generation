@@ -3,6 +3,8 @@ import './form.style.css';
 import Chirologo from '../../assets/ChiroHDLogo.png';
 import {withRouter} from 'react-router-dom'
 import record from '../../data/record'
+import Footer from '../Footer/Footer'
+import Header from '../Header/Header';
 
 class FormPage extends React.Component {
 
@@ -36,23 +38,27 @@ class FormPage extends React.Component {
 
     render(){
         return (
+            <>
+            <Header/>
             <div className = "form_parent">
-                <div className = "logo_wrapper">
+                {/* <div className = "logo_wrapper">
                     <img src = {Chirologo} alt="Logo"/>
-                </div>
+                </div> */}
                 <div className = "form_wrapper">
                     <div className = "content">
                         <p>LabCorpID</p>
                         <input type="text" onChange={(e)=> this.handleUserInput(e)} />
                         {/* <NavLink to="/form"> */}
                         <div className = "btn" onClick={() => this.handleSubmit()} >
-                            <p>Next</p>
+                            <p>Fetch Report</p>
                         </div>
                         {/* </NavLink> */}
                     </div>
                    
                 </div>
             </div>
+            <Footer/>
+            </>
         )
     }
 

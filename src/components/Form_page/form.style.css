@@ -6,9 +6,9 @@
 .form_parent {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 60vh;
     width: 100%;
-    background-color: #F2FFFD;
+    background-color: #f8fafa;
     justify-content: center;
     align-items: center;
 }
@@ -32,11 +32,11 @@
     width: 400px;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow:
+    /* background-color: white; */
+    /* border-radius: 5px; */
+    /* box-shadow:
             0 1.5px 55.8px rgba(0, 0, 0, 0.03),
-            0 12px 446px rgba(0, 0, 0, 0.06);
+            0 12px 446px rgba(0, 0, 0, 0.06); */
 
 
 }
@@ -66,7 +66,7 @@ a{
 .form_parent .form_wrapper .content input {
     height: 30px;
     width: 70%;
-    background-color: #F2FFFD;
+    background-color: #f8fafa;
     margin-bottom: 1em;
     padding: 1em;
     font-weight: 600;
@@ -75,8 +75,8 @@ a{
 
 .form_parent .form_wrapper .content .btn {
     height: 30px;
-    width: 200px;
-    background-color: #34EDC0;
+    width: 130px;
+    background-color: #989998;
     border-radius: 2px;
     justify-content: center;
     align-items: center;
@@ -84,13 +84,14 @@ a{
 }
 
 .form_parent .form_wrapper .content .btn:hover {
-    background-color: #16E4AE;
+    background-color: #c9cccc;
     cursor: pointer;
 }
 
 .form_parent .form_wrapper .content .btn p{
+    margin-top: 2px;
     text-align: center;
-    color: rgb(54, 53, 53);
+    color: black;
 }
 
 
