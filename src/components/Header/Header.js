@@ -23,7 +23,7 @@ function Header() {
                 <div className = "header_right">
                     <img src = {ulogo}/>
                     <p>Login</p>
-                    <p className = "reg">REGISTER to Start Learning Point</p>
+                    <p className = "reg">REGISTER</p>
                 </div>
             </div>
         </div>
