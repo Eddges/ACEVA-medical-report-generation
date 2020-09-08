@@ -56,6 +56,29 @@ class Prescription extends Component{
    })
   };
 
+  toggleItemEditing = index => {
+    this.setState({
+      items: this.state.items.map((item, itemIndex) => {
+        if (itemIndex === index) {
+          return {
+            ...item,
+            isEditing: !item.isEditing
+          }
+        }
+        return item;
+      })
+    });
+  };
+
+  onDelete = index => {
+    this.setState({
+      items: [
+        ...this.state.items.slice(0, index),
+        ...this.state.items.slice(index + 1)
+      ]
+    });
+   };
+
   render() {
     const {name, startDate, endDate, quantities} = this.state;
     return <div className = "pres_wrapper">
@@ -92,16 +115,11 @@ class Prescription extends Component{
                   <td> {item.startDate} </td>
                   <td> {item.endDate} </td>
                   <td> {item.quantities} </td>
-                  <td><button>Edit</button></td>
-                  <td><button>Delete</button></td>
+                  <td><button onClick = { () => this.toggleItemEditing(index)}> {item.isEditing ? "Save" : "Edit"}</button></td>
+                  <td><button onClick = {() => this.onDelete(index)}>Delete</button></td>
 
                   </tr>
-                // <ItemCard
-                //     key={item.id}
-                //     index={index}
-                //     image={image}
-                //     item={item}
-                // />
+                
             )
           }
         
