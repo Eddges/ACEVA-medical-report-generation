@@ -8,14 +8,19 @@ export const AddItem = ({name, startDate,endDate,quantities, onChange, onSubmit}
  <div className = "main_wrapper">
    <form className = "input_form" onSubmit = {onSubmit} >
        <div className = "main_input">
-            <input
+            <select
                 type="text"
                 className="sub_input"
                 placeholder="Item"
                 value={name}
                 name="name"
                 onChange={onChange}
-            />
+            >
+                <option value="Vitamin1">Vitamin1</option>
+                <option value="Vitamin2">Vitamin2</option>
+                <option selected value="Vitamin3">Vitamin3</option>
+                <option value="Vitamin4">Vitamin4</option>
+            </select>
             <button type="submit">Add</button>
 
        </div>
