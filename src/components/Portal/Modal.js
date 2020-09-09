@@ -67,7 +67,7 @@ function Modal({ open , children, onClose}) {
         <>
           <div className = {styles.Overlay_Styles}/>
           <div className = {styles.Modal_Styles}>
-            <button style = {Button_el} onClick = {onClose}> <img src="https://img.icons8.com/officel/20/000000/multiply.png"/> </button>
+            {/* <button style = {Button_el} onClick = {onClose}> <img src="https://img.icons8.com/officel/20/000000/multiply.png"/> </button> */}
             <Prescription/>
             <div className = {styles.Footer}>
             <button onClick = {onClose}> Submit </button>

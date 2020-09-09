@@ -13,7 +13,7 @@
     width: 80%;
     height: 20vh;
     align-items: center;
-    border: 2.5px solid rgb(194, 190, 190);
+    border: 2.5px solid rgb(226, 224, 224);
     padding:10px;
     border-radius: 7px;
     /* background-color: aquamarine; */
@@ -34,8 +34,18 @@
     height: 50px;
     padding-left: 10px;
     border-radius: 5px;
-    background-color: rgb(219, 215, 215);
-    color: white;
+    background-color: rgb(241, 238, 238);
+    color: black;
+    border: none;
+}
+
+.main_wrapper .input_form .main_input select {
+    width: 70%;
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: rgb(241, 238, 238);
+    color: black;
     border: none;
 }
 
@@ -46,11 +56,11 @@
 }
 
 .main_wrapper .input_form .main_input button{
-    height: 25px;
-    width: 50px;
+    height: 30px;
+    width: 70px;
     margin-left: 10px;
     border: none;
-    background-color: rgb(13, 209, 13);
+    background-color: #97d700;
     color: black;
     border-radius: 4px;
 }
@@ -68,10 +78,10 @@
 }
 
 .main_wrapper .input_form .secondary_input input {
-    width: 15%;
+    width: 20%;
     height: 35px;
     border-radius: 3px;
-    background-color: rgb(219, 215, 215);
+    background-color: rgb(241, 238, 238);
     outline: none;
     border: none;
     margin-left: 15px;

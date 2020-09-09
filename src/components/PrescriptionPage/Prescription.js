@@ -130,9 +130,9 @@ class Prescription extends Component{
             item.isEditing ?
             <tr key = {item.key}>
               <td> <input value = {item.name}/> </td>
-              <td> <input/> </td>
-              <td> <input/> </td>
-              <td> <input/> </td>
+              <td> <input value = {item.startDate}/> </td>
+              <td> <input value = {item.endDate}/> </td>
+              <td> <input value = {item.quantities}/> </td>
               <td><button onClick = { () => this.toggleItemEditing(index)}> {item.isEditing ? "Save" : "Edit"}</button></td>
               <td><button onClick = {() => this.onDelete(index)}>Delete</button></td>
 
