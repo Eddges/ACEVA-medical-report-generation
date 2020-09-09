@@ -32,7 +32,7 @@
 .Container .Menu .MenuItem {
   color: white;
   font-weight: 600;
-  padding: 0px 2%;
+  padding: 0px 15px;
 }
 
 .Container .Search {

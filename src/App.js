@@ -28,8 +28,10 @@ class App extends React.Component{
                 {/* <Route path="/" exact render={() => <FormPage userData={(user) => this.storeUser(user)} />} /> */}
                 {/* <Route path="/form" exact render={() => <MedReport userName={this.state.user.user} />} /> */}
                 {/* <MedReport /> */}
-                <Layout>
-                    <MedReport />
+                <Layout user={this.state.user}>
+                    <Route path="/" exact render={() => <FormPage userData={(user) => this.storeUser(user)} />} />
+                    <Route path="/form" exact render={() => <MedReport userName={this.state.user.user} />} />
+                    {/* <MedReport /> */}
                 </Layout>
                 {/* <Portal/> */}
             </div>

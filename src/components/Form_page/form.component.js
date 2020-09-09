@@ -39,7 +39,7 @@ class FormPage extends React.Component {
     render(){
         return (
             <>
-            <Header/>
+            {/* <Header/> */}
             <div className = "form_parent">
                 {/* <div className = "logo_wrapper">
                     <img src = {Chirologo} alt="Logo"/>
@@ -57,7 +57,7 @@ class FormPage extends React.Component {
                    
                 </div>
             </div>
-            <Footer/>
+            {/* <Footer/> */}
             </>
         )
     }

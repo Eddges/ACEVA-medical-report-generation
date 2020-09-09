@@ -7,7 +7,7 @@ import Header_Menu from '../Header_Menu/Header_Menu'
 const Layout = (props) => {
     return(
         <div>
-            <Header />
+            <Header user={props.user} />
             <Header_Menu />
             <div className={classes.Main}>{props.children}</div>
             <Footer />

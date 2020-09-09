@@ -7,10 +7,11 @@ const Button_Wrapper_Styles = {
     height: '50px',
     margin: '0px',
     // borderRadius: '25px',
-    backgroundColor: '#494949',
+    backgroundColor: '#97d700',
     border: 'none',
     color: '#fff',
-    width: '150px',
+    textShadow : '0px 0px 5px rgba(0, 0, 0, 0.417)',
+    width: '170px',
     display: 'flex',
     justifyContent:'center',
     alignItems:'center',
@@ -20,7 +21,7 @@ const Button_Wrapper_Styles = {
 
 const Button_el = {
     height:'40px',
-    width:'110px',
+    width:'130px',
     border:'none',
     backgroundColor:'white',
     fontWeight:600,
@@ -41,7 +42,7 @@ function Portal() {
     return (
     <>
         <div style = {Button_Wrapper_Styles}>
-            <p  onClick = {() => setIsOpen(true)} >Prescribe</p>
+            <p  onClick = {() => setIsOpen(true)} >PRESCRIPTION</p>
         </div>
         <Modal open = {isOpen} onClose = {()=> setIsOpen(false)}/>
         {/* </Modal> */}

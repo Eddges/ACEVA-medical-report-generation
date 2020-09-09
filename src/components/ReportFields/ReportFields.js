@@ -27,20 +27,37 @@ class ReportFields extends React.Component{
                 <div className={classes.MidTop}>
 
                     {/* <i className={`${classes.ItemIcon} ${"fas fa-file-medical"}`} style={{'color' : '#0075f6'}}></i> */}
-                    <span className={`${classes.Item} ${classes.Specific}`}>Field</span>
-                    <span className={classes.Item}>Current <span className={classes.FieldDate}>{this.props.userInfo.current}</span></span>
-                    <span className={classes.Item}>Previous 1 <span className={classes.FieldDate}>{this.props.userInfo.previous1}</span></span>
-                    <span className={classes.Item}>Previous 2 <span className={classes.FieldDate}>{this.props.userInfo.previous2}</span></span>
-                    <span className={classes.Item}>Previous 3 <span className={classes.FieldDate}>{this.props.userInfo.previous3}</span></span>
+                    <span className={`${classes.Item} ${classes.Specific}`}>Element</span>
+                    
+                    <div className={classes.Current}>
+                        <span className={classes.Text}>Current</span>
+                        <span className={classes.VerticalLine}></span>
+                        <div className={classes.Dates}>
+                            <span className={classes.DateItem}><span className={classes.FieldDate}>{this.props.userInfo.current}</span></span>
+                        </div>
+                    </div>
+                    <div className={classes.Previous}>
+                        <span className={classes.Text}>Previous</span>
+                        <span className={classes.VerticalLine}></span>
+                        <div className={classes.Dates}>
+                            <span className={classes.DateItem}><span className={classes.FieldDate}>{this.props.userInfo.previous1}</span></span>
+                            <span className={classes.DateItem}><span className={classes.FieldDate}>{this.props.userInfo.previous2}</span></span>
+                            <span className={classes.DateItem}><span className={classes.FieldDate}>{this.props.userInfo.previous3}</span></span>
+                        </div>
+                    </div>
+                    
 
                     {/* <span className={classes.Item}>Status</span> */}
-                    <span className={classes.Item}>Reference</span>
+                    <span className={classes.Item}>Optimal Range</span>
+                    <span className={classes.Item}>Standard Range</span>
+                    <span className={classes.Item}>Unit</span>
 
                 </div>
 
                 {/* <div className={classes.MidReport}> */}
                     {filterstate ? 
                         this.props.mainArray.map((iterator, index) => {
+                            console.log('iterator', iterator)
                             if(iterator.status === filterstate) {
                                 return (
                                     <ReportField {...iterator} key={index} />

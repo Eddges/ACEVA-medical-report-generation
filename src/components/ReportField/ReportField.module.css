@@ -4,7 +4,7 @@
   display: -ms-flexbox;
   display: flex;
   min-height: 50px;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -20,42 +20,45 @@
 }
 
 .Container .Item {
-  min-width: 150px;
-  color: #043c70;
+  min-width: 140px;
   font-weight: 700;
   font-size: 1rem;
-  color: #0075f6;
+  color: #5a5a5a;
+  text-align: center;
 }
 
 .Container .Specific {
   min-width: 220px;
+  text-align: left;
 }
 
 .Container .CurrDate {
   font-weight: 400;
   color: #444444;
   font-size: 0.7rem;
+  text-align: center;
 }
 
 .Container .CurrDate span {
   font-size: 1rem;
   color: #0075f6;
-  margin-right: 15px;
   font-weight: 700;
+  color: #5a5a5a;
 }
 
 .Container .PrevDate {
   font-weight: 400;
   color: #444444;
   font-size: 0.7rem;
+  text-align: center;
 }
 
 .Container .PrevDate span {
   font-size: 1rem;
   color: #043c70;
   color: #0075f6;
-  margin-right: 15px;
   font-weight: 700;
+  color: #5a5a5a;
 }
 
 .Container .Status {

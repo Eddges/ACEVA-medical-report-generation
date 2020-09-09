@@ -7,7 +7,7 @@ import plogo from '../../assets/phone.png';
 import ylogo from '../../assets/youtube.png';
 import ulogo from '../../assets/user.png';
 
-function Header() {
+function Header(props) {
     return (
         <div className = "header_wrapper">
             <div className = "header_content">
@@ -22,8 +22,16 @@ function Header() {
                 </div>
                 <div className = "header_right">
                     <img src = {ulogo}/>
-                    <p>Login</p>
-                    <p className = "reg">REGISTER</p>
+                    <p> {props.user ? props.user.user :  "Login"}</p>
+                    {
+                        props.user ? <p className = "reg">Gender {props.user.gender}</p>
+                        : null
+                    }
+                    {
+                        props.user ? <p className = "reg">Age {props.user.age}</p>
+                        : null
+                    }
+                    
                 </div>
             </div>
         </div>

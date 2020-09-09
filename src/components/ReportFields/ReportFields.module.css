@@ -1,5 +1,4 @@
 .Mid {
-  width: 100%;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,9 +17,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 60px;
+  min-height: 80px;
   padding: 0px 20px;
   background-color: #f0f4f9;
+  background-color: #efffca;
 }
 
 .Mid .MidTop .ItemIcon {
@@ -29,8 +29,33 @@
 
 .Mid .MidTop .Item {
   min-width: 140px;
-  color: #818181;
+  color: #5a5a5a;
   font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.Mid .MidTop .Item .FieldDate {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #686868;
+}
+
+.Mid .MidTop .VerticalLine {
+  width: 70%;
+  height: 1px;
+  background-color: #686868;
+}
+
+.Mid .MidTop .Previous {
+  min-width: 420px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,21 +63,82 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 1rem;
 }
 
-.Mid .MidTop .Item .FieldDate {
-  margin-left: 5px;
+.Mid .MidTop .Previous .Text {
+  color: #5a5a5a;
+  font-weight: 600;
+}
+
+.Mid .MidTop .Previous .Dates {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Mid .MidTop .Previous .Dates .DateItem {
+  min-width: 140px;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #686868;
+}
+
+.Mid .MidTop .Current {
+  height: 100%;
+  min-width: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.Mid .MidTop .Current .Text {
+  color: #5a5a5a;
+  font-weight: 600;
+}
+
+.Mid .MidTop .Current .Dates {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Mid .MidTop .Current .Dates .DateItem {
+  min-width: 140px;
+  text-align: center;
   font-size: 0.7rem;
   font-weight: 600;
   color: #686868;
 }
 
 .Mid .MidTop .Specific {
-  min-width: 200px;
+  min-width: 220px;
+  text-align: left;
 }
 
 .Mid .MidReport {
-  width: auto;
   height: 60vh;
 }
 /*# sourceMappingURL=ReportFields.module.css.map */
