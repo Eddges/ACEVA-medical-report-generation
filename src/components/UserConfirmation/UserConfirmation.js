@@ -10,7 +10,8 @@ class UserConfirmation extends React.Component{
         gender : this.props.user.gender,
         email : this.props.user.email,
         telephone : this.props.user.telephone,
-        mobile : this.props.user.mobile
+        mobile : this.props.user.mobile,
+        disabled : true
     }
 
     handleCancel = () => {
@@ -21,6 +22,13 @@ class UserConfirmation extends React.Component{
     handleAccept = () => {
         this.props.passUser(this.state)
         this.props.toggleUserConfirmation()
+    }
+
+    handleEdit = () => {
+        this.setState({
+            ...this.state,
+            disabled : false
+        })
     }
 
     changeName = (e) => {
@@ -68,28 +76,29 @@ class UserConfirmation extends React.Component{
                     <span className={classes.Heading}>User Data</span>
                     <div className={classes.Name}>
                         <span>User</span>
-                        <input placeholder="Name" value={this.state.user} onChange={(e) => this.changeName(e)} />
+                        <input placeholder="Name" value={this.state.name} onChange={(e) => this.changeName(e)} disabled={this.state.disabled} />
                     </div>
                     <div className={classes.Age}>
                         <span>Age</span>
-                        <input placeholder="Age" value={this.props.user.age ? this.state.age : 'NA'} onChange={(e) => this.changeAge(e)} />
+                        <input placeholder="Age" value={this.props.user.age ? this.state.age : 'NA'} onChange={(e) => this.changeAge(e)} disabled={this.state.disabled} />
                         <span className={classes.GenderLabel}>Gender</span>
-                        <input placeholder="Gender" value={this.props.user.gender ? this.state.gender : 'NA'} onChange={(e) => this.changeGender(e)} />
+                        <input placeholder="Gender" value={this.props.user.gender ? this.state.gender : 'NA'} onChange={(e) => this.changeGender(e)} disabled={this.state.disabled} />
                     </div>
                     <div className={classes.Name}>
                         <span>E-Mail</span>
-                        <input placeholder="E-Mail" value={this.props.user.email ? this.state.email : 'NA'} onChange={(e) => this.changeEmail(e)} />
+                        <input placeholder="E-Mail" value={this.props.user.email ? this.state.email : 'NA'} onChange={(e) => this.changeEmail(e)} disabled={this.state.disabled} />
                     </div>
                     <div className={classes.Name}>
                         <span>Telephone</span>
-                        <input placeholder="Telephone" value={this.props.user.telephone ? this.state.telephone : 'NA'} onChange={(e) => this.changeTelephone(e)} />
+                        <input placeholder="Telephone" value={this.props.user.telephone ? this.state.telephone : 'NA'} onChange={(e) => this.changeTelephone(e)} disabled={this.state.disabled} />
                     </div>                    
                     <div className={classes.Name}>
                         <span>Mobile</span>
-                        <input placeholder="Mobile" value={this.props.user.mobile ? this.state.mobile : 'NA'} onChange={(e) => this.changeMobile(e)} />
+                        <input placeholder="Mobile" value={this.props.user.mobile ? this.state.mobile : 'NA'} onChange={(e) => this.changeMobile(e)} disabled={this.state.disabled} />
                     </div>
                     <div className={classes.Controls}>
                         <button className={classes.AcceptButton} onClick={this.handleAccept} >Accept and Continue</button>
+                        <button className={classes.CancelButton} onClick={() => this.handleEdit()} >Edit</button>
                         <button className={classes.CancelButton} onClick={() => this.handleCancel()} >Cancel</button>
                     </div>
                 </div>

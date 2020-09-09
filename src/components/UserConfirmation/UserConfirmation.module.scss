@@ -44,6 +44,9 @@
                 border : solid 2px #97d700;
                 color : grey;
                 font-weight: 600;
+                &:disabled{
+                    background-color : rgba(128, 128, 128, 0.178);
+                }
             }
         }
         .Age{
@@ -65,6 +68,9 @@
                 border : solid 2px #97d700;
                 color : grey;
                 font-weight: 600;
+                &:disabled{
+                    background-color : rgba(128, 128, 128, 0.178);
+                }
             }
             .GenderLabel{
                 margin-left : 20px;

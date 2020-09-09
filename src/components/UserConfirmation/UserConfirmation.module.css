@@ -69,6 +69,10 @@
   font-weight: 600;
 }
 
+.Container .Main .Name input:disabled {
+  background-color: rgba(128, 128, 128, 0.178);
+}
+
 .Container .Main .Age {
   margin-top: 15px;
   display: -webkit-box;
@@ -94,6 +98,10 @@
   border: solid 2px #97d700;
   color: grey;
   font-weight: 600;
+}
+
+.Container .Main .Age input:disabled {
+  background-color: rgba(128, 128, 128, 0.178);
 }
 
 .Container .Main .Age .GenderLabel {
