@@ -63,4 +63,10 @@
 .Container .Search input:hover, .Container .Search input:focus {
   background-color: #043c7007;
 }
+
+@media (max-width: 798px) {
+  .Container {
+    display: none;
+  }
+}
 /*# sourceMappingURL=Header_Menu.module.css.map */
