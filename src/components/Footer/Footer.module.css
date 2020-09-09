@@ -68,3 +68,40 @@
   .footer .footer_down p{
     margin-top: 5px;
   }
+
+  @media screen and (max-width: 786px) {
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      background-color: #f8fafa;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid green;
+    } 
+    .footer .footer_up {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 80%;
+      width: 100%;
+      /* background-color: aliceblue; */
+      justify-content: center;
+      align-items: center;
+      border-bottom: none;
+      /* margin-left: 5em; */
+    }
+
+    .footer .footer_up .box {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      height: 350px;
+      padding-top: 1em;
+      padding-left: 10px;
+     
+    }
+
+    
+  }
