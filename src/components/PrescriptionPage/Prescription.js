@@ -79,6 +79,23 @@ class Prescription extends Component{
     });
    };
 
+   handleItemUpdate = (event, index) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    this.setState({
+      items: this.state.items.map((item, itemIndex) => {
+        if (itemIndex === index) {
+          return {
+            ...item,
+            [name]: value
+          }
+        }
+        return item;
+      })
+    });
+   };
+
   render() {
     const {name, startDate, endDate, quantities} = this.state;
     return <div className = "pres_wrapper">
@@ -110,15 +127,31 @@ class Prescription extends Component{
             
           {
             this.state.items.map((item, index) =>
-                <tr key = {item.key}>
-                  <td> {item.name} </td>
-                  <td> {item.startDate} </td>
-                  <td> {item.endDate} </td>
-                  <td> {item.quantities} </td>
-                  <td><button onClick = { () => this.toggleItemEditing(index)}> {item.isEditing ? "Save" : "Edit"}</button></td>
-                  <td><button onClick = {() => this.onDelete(index)}>Delete</button></td>
+            item.isEditing ?
+            <tr key = {item.key}>
+              <td> <input value = {item.name}/> </td>
+              <td> <input/> </td>
+              <td> <input/> </td>
+              <td> <input/> </td>
+              <td><button onClick = { () => this.toggleItemEditing(index)}> {item.isEditing ? "Save" : "Edit"}</button></td>
+              <td><button onClick = {() => this.onDelete(index)}>Delete</button></td>
 
-                  </tr>
+              </tr>
+              :
+
+
+
+              <tr key = {item.key}>
+              <td> {item.name} </td>
+              <td> {item.startDate} </td>
+              <td> {item.endDate} </td>
+              <td> {item.quantities} </td>
+              <td><button onClick = { () => this.toggleItemEditing(index)}> {item.isEditing ? "Save" : "Edit"}</button></td>
+              <td><button onClick = {() => this.onDelete(index)}>Delete</button></td>
+
+              </tr>
+            
+                
                 
             )
           }
@@ -130,7 +163,8 @@ class Prescription extends Component{
         {/* <hr/> */}
         {/* <Footer/> */}
       </div>
-    </div>;
+    </div>
+    ;
   }
 }
 
