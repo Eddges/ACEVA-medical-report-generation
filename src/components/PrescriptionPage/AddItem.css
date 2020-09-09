@@ -13,8 +13,9 @@
     width: 80%;
     height: 20vh;
     align-items: center;
-    border: 2px solid rgb(194, 190, 190);
+    border: 2.5px solid rgb(194, 190, 190);
     padding:10px;
+    border-radius: 7px;
     /* background-color: aquamarine; */
 }
 
@@ -45,12 +46,13 @@
 }
 
 .main_wrapper .input_form .main_input button{
-    height: 20px;
+    height: 25px;
     width: 50px;
     margin-left: 10px;
     border: none;
     background-color: rgb(13, 209, 13);
     color: black;
+    border-radius: 4px;
 }
 
 .main_wrapper .input_form .main_input button:focus{
@@ -79,5 +81,49 @@
 
 .main_wrapper .input_form .secondary_input input:focus {
     outline:none
+}
+
+@media screen and (max-width: 786px) {
+    .main_wrapper .input_form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 20vh;
+        align-items: center;
+        border: 2.5px solid rgb(194, 190, 190);
+        padding:10px;
+        border-radius: 7px;
+        /* background-color: aquamarine; */
+    }
+
+    .main_wrapper .input_form .main_input {
+        display: flex;
+        flex-basis: 40%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        /* background-color: black; */
+    
+    }
+
+    .main_wrapper .input_form .secondary_input {
+        display: flex;
+        flex-basis: 60%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main_wrapper .input_form .secondary_input input {
+        width: 70%;
+        height: 35px;
+        border-radius: 3px;
+        background-color: rgb(219, 215, 215);
+        outline: none;
+        border: none;
+        margin-left: 15px;
+        padding-left: 10px;
+    
+    }
 }
 

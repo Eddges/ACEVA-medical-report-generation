@@ -3,6 +3,7 @@ import Main from '../Prescription/main.component';
 import ReactDom from 'react-dom';
 import styled from 'styled-components';
 import styles from './modal.module.css';
+import Prescription from '../PrescriptionPage/Prescription';
 
 // const Modal_Styles = {
 //     position: 'fixed',
@@ -32,7 +33,7 @@ import styles from './modal.module.css';
 
 const Button_el = {
     border:'none',
-    backgroundColor:'white',
+    backgroundColor:'gray',
     fontWeight:600,
     color:'white',
     marginLeft:'1em',
@@ -49,7 +50,7 @@ const Buttonel = {
     backgroundColor:'#0075f6',
     fontWeight:600,
     color:'white',
-    right:0
+    marginLeft:'auto'
 }
 
 // const Footer = {
@@ -66,10 +67,11 @@ function Modal({ open , children, onClose}) {
         <>
           <div className = {styles.Overlay_Styles}/>
           <div className = {styles.Modal_Styles}>
-            <button style = {Button_el} onClick = {onClose}> <img src="https://img.icons8.com/officel/10/000000/multiply.png"/> </button>
-            <Main/>
+            <button style = {Button_el} onClick = {onClose}> <img src="https://img.icons8.com/officel/20/000000/multiply.png"/> </button>
+            <Prescription/>
             <div className = {styles.Footer}>
-            <button style = {Buttonel} onClick = {onClose}> Submit </button>
+            <button onClick = {onClose}> Submit </button>
+            <button  onClick = {onClose}> Cancel </button>
 
 
             </div>

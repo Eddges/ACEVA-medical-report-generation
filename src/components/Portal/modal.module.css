@@ -2,13 +2,13 @@
     position: fixed;
     top: 50%;
     left:50%;
-    height: 450px;
-    width: 500px;
+    height: 100%;
+    width: 100%;
     transform: translate(-50%, -50%);
     background-color:#fff;
-    padding:50px;
+    /* padding:50px; */
     z-index: 1000;
-    border-radius:10px;
+    /* border-radius:10px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,15 +26,45 @@
 }
 
 .Footer{
-    position: relative;
+    display: flex;
+    /* position: relative; */
     bottom: 0;
     height: 100px;
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.Footer button {
+    margin-left: 50px;
+    margin-right: 20px;
+    height: 35px;
+    width: 75px;
+    background-color: rgb(9, 175, 9);
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.8em;
+
+}
+
+.Footer .button2 {
+    margin-left: 500px;
+    margin-right: 20px;
+    height: 35px;
+    width: 75px;
+    background-color: green;
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.8em;
+
 }
 
 @media (max-width: 768px) {
     .Modal_Styles{
         width: 100%;
-        height: 70%;
+        height: 100%;
     }
   }
