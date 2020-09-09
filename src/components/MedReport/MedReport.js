@@ -18,7 +18,8 @@ class MedReport extends React.Component{
 
     render(){
 
-        const currUser = this.props.userName
+        // const currUser = this.props.userName
+        const currUser = this.props.userName ? this.props.userName : 'John Doe'
         const userInfo = record.find(user => {
             return user.user === currUser
         })
@@ -27,21 +28,28 @@ class MedReport extends React.Component{
             const field = {
                 description : iterator.description,
                 specific : iterator.specific,
-                currentDate : userInfo.report[`${iterator.specific}`].current.date,
-                previousDate : userInfo.report[`${iterator.specific}`].previous.date,
-                currentValue : userInfo.report[`${iterator.specific}`].current.value,
-                previousValue : userInfo.report[`${iterator.specific}`].previous.value,
-                rangeLower : iterator.lower,
-                rangeUpper : iterator.upper
+                currentDate : userInfo.report[`${iterator.specific}`] ? userInfo.report[`${iterator.specific}`].current.date : 'NA',
+                previousDate : userInfo.report[`${iterator.specific}`] ? userInfo.report[`${iterator.specific}`].previous1.date : 'NA',
+                currentValue : userInfo.report[`${iterator.specific}`]? userInfo.report[`${iterator.specific}`].current.value : 'NA',
+                previousValue : userInfo.report[`${iterator.specific}`]? userInfo.report[`${iterator.specific}`].previous1.value : 'NA',
+                optimalLower : iterator.optimalLower,
+                optimalUpper : iterator.optimalUpper,
+                standardUpper : iterator.standardUpper,
+                standardLower : iterator.standardLower,
+                unit : iterator.unit
             }
             let status="GREEN"
-            if(userInfo.report[`${iterator.specific}`].current.value < iterator.lower || userInfo.report[`${iterator.specific}`].current.value > iterator.upper) {
-                status="AMBER"
+
+            if(userInfo.report[`${iterator.specific}`]){
+                if(userInfo.report[`${iterator.specific}`].current.value < iterator.optimalLower || userInfo.report[`${iterator.specific}`].current.value > iterator.optimalUpper) {
+                    status="AMBER"
+                }
+                if(userInfo.report[`${iterator.specific}`].current.value < iterator.standardLower || userInfo.report[`${iterator.specific}`].current.value > iterator.standardUpper) {
+                    status="RED"
+                }
+                field.status = status
             }
-            if(userInfo.report[`${iterator.specific}`].current.value < iterator.criticalLower || userInfo.report[`${iterator.specific}`].current.value > iterator.criticalUpper) {
-                status="RED"
-            }
-            field.status = status
+
             return field
         })
 
@@ -73,23 +81,14 @@ class MedReport extends React.Component{
 
         return(
             <div className={classes.Container}>
+
+                <span className={classes.Heading}>BLOOD TEST REPORT RESULT</span>
                 <div className={classes.Report}>
 
-                    <div className={classes.Top}>
+                    {/* <div className={classes.Top}>
 
                         <img src={Logo} alt="Logo" />
 
-                        {/* <div className={classes.Search}>
-                            <input placeholder="Search Record" />
-                        </div> */}
-
-                        {/* <div className={classes.Select}>
-                            <select>
-                                <option>Report</option>
-                                <option>Supplements</option>
-                            </select>
-                        </div> */}
-                        {/* <Portal/> */}
 
 
 
@@ -136,9 +135,9 @@ class MedReport extends React.Component{
 
 
 
-                    </div>
+                    </div> */}
                     
-                    <div className={classes.Mid}>
+                    <div className={classes.Middle}>
                         <ReportFields filterState={this.state.filterState} ref={el => (this.componentRef = el)} mainArray={mainArray} userInfo={userInfo} />
                     </div>
 
@@ -146,8 +145,7 @@ class MedReport extends React.Component{
 
                         <div className={classes.LabelFilter} onClick={handleFilterState} >
                             <i className="fas fa-eye" style={{'color' : eyeColor}}></i>
-                            {/* <div className={classes.VerticalLine}></div> */}
-                            <span className={classes.FilterText}>Filter</span>
+                            <span className={classes.FilterText}>FILTER</span>
                         </div>
 
                         {/* <button className={classes.Prescription}>Prescription</button> */}
@@ -159,7 +157,7 @@ class MedReport extends React.Component{
                             trigger={() => {
                                 // NOTE: could just as easily return <SomeComponent />. Do NOT pass an `onClick` prop
                                 // to the root node of the returned component as it will be overwritten.
-                                return <button className = {classes.PDF}>Save as PDF</button>;
+                                return <button className = {classes.PDF}>SAVE AS PDF</button>;
                             }}
                             pageStyle='@page { size: A5; margin: 0mm; width : 100%; } @media print { body { -webkit-print-color-adjust: exact; padding: 40px !important; } }'
                             content={() => this.componentRef}

@@ -1,0 +1,66 @@
+.Container {
+  width: 100%;
+  height: 60px;
+  background-color: #97d700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Logo {
+  height: 80%;
+  margin-left: 30px;
+}
+
+.Container .Menu {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 70%;
+}
+
+.Container .Menu .MenuItem {
+  color: white;
+  font-weight: 600;
+  padding: 0px 15px;
+}
+
+.Container .Search {
+  margin-left: 20px;
+}
+
+.Container .Search input {
+  width: 200px;
+  height: 45px;
+  background-color: white;
+  border: 1px solid #043c7024;
+  border-radius: 5px;
+  color: #3d3d3d;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0px 40px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../../assets/Search.png");
+  background-position: left 15px top 50%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.Container .Search input:hover, .Container .Search input:focus {
+  background-color: #043c7007;
+}
+/*# sourceMappingURL=Header_Menu.module.css.map */

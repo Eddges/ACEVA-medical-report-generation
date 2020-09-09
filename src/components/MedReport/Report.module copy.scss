@@ -25,6 +25,10 @@
         width : 100%;
         height : 100%;
         padding : 20px 0px;
+        // background-color : white;
+        // box-shadow:  20px -20px 60px #c6cfd8, 
+        //      -20px 20px 60px #ffffff;
+        // border-radius: 10px;
         overflow : auto;
         .UserAreaPhone{
             display : none;
@@ -104,15 +108,184 @@
                 }
             }
         }
+        .Top{
+            width : 100%;
+            padding : 0px 20px;
+            display : flex;
+            align-items: center;
+            min-height : 100px;
+            img{
+                height : 40px;
+            }
+            // .UserAreaDesktop{
+            //     margin-left : 2%;
+            //     height : 70px;
+            //     display : flex;
+            //     align-items: center;
+            //     // padding : 2px;
+            //     border-radius: 5px;
+            //     justify-self: flex-end;
+            //     .PrescriptionDetails{
+            //         max-width : 280px;
+            //         display : flex;
+            //         flex-wrap : wrap;
+            //         // background-color: #cfdff1;
+            //         border-radius : 5px;
+            //         height : 100%;
+            //         overflow : auto;
+            //         padding : 2px 2px;
+            //         background-color : #e9f3fe;
 
-        .Middle{
-            width : 85%;
+            //         .PrescriptionItem{
+            //             // background-color : white;
+            //             border : solid 1px #0075f6;
+            //             color : #0075f6;
+            //             font-size : 0.8rem;
+            //             font-weight: 600;
+            //             padding : 2px 5px;
+            //             border-radius : 5px;
+            //             margin-left : 5px;
+            //             margin-top : 2px;
+            //         }
+            //     }
+            //     .UserDetails{
+            //         margin-left : 2%;
+            //         width : auto;
+            //         height : 100%;
+            //         display : flex;
+            //         align-items: center;
+            //         i{
+            //             font-size : 2rem;
+            //             margin-left : 10px;
+
+            //         }
+            //         .UserName{
+            //             width : 100px; 
+            //             color : rgb(93, 93, 93);
+            //             font-weight : 600;
+            //             font-size : 1.2rem;
+            //             margin-left : 10px;
+            //         }
+            //     }
+            // }
+            .Select{
+                margin-left : 5%;
+                select{
+                    width : 150px;
+                    height : 45px;
+                    background-color : white;
+                    border : 1px solid #043c7024;
+                    border-radius : 5px;
+                    color : #043c70de;
+                    font-size : 0.9rem;
+                    font-weight: 600;
+                    padding : 0px 20px;
+                    appearance: none;
+                    background-image : url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><polygon points="0,0 100,0 50,80" style="fill: %23033c6f;" /></svg>');
+                    background-position : right 10px top 50%;
+                    background-repeat: no-repeat;
+                    background-size : 10px;
+                    transition : all 0.2s;
+                    &:hover, &:focus{
+                        cursor: pointer;
+                        background-color : #043c7007;
+                    }
+                    }
+            }
+            .Search{
+                margin-left : 100px;
+                input{
+                    width : 300px;
+                    height : 45px;
+                    background-color : white;
+                    border : 1px solid #043c7024;
+                    border-radius : 5px;
+                    color : #3d3d3d;
+                    font-size : 0.9rem;
+                    font-weight: 400;
+                    padding : 0px 50px;
+                    appearance: none;
+                    background-image : url('../../assets/Search.png');
+                    background-position : left 15px top 50%;
+                    background-repeat: no-repeat;
+                    background-size : 15px;
+                    transition : all 0.2s;
+                    &:hover, &:focus{
+                        background-color : #043c7007;
+                    }
+                    }
+            }
+            // .Prescription{
+            //     padding : 15px 20px;
+            //     border : none;
+            //     background-color : #0075f6;
+            //     color : white;
+            //     font-weight: 600;
+            //     border-radius : 5px;
+            //     margin-left : 4%;
+            //     transition : all 0.2s;
+            //     &:hover{
+            //         cursor: pointer;
+            //         background-color : #005dc0;
+            //     }
+            // }
+            // .LabelFilter{
+            //     width : 45px;
+            //     height : 45px;
+            //     background-color : white;
+            //     border : 1px solid #043c7024;
+            //     border-radius : 5px;
+            //     margin-left : 2%;
+            //     display : flex;
+            //     flex-direction: column;
+            //     justify-content: center;
+            //     align-items: center;
+            //     transition : all 0.2s;
+            //     i{
+            //         // width : 15px;
+            //         font-size : 15px;
+            //     }
+            //     .VerticalLine{
+            //         width : 15px;
+            //         height : 2px;
+            //         margin-top : 2px;
+            //         background-color : #0075f6;
+            //     }
+            //     .Filter{
+            //         width : 10px;
+            //         height : 10px;
+            //         background-color : #0075f6;
+            //         border-radius : 50%;
+            //     }
+                
+            //     &:hover, &:focus{
+            //         cursor: pointer;
+            //         background-color : #043c7007;
+            //     }
+            // }
+            // .PDF {
+            //     background-color : #0075f6;
+            //     color : white;
+            //     font-weight: 600;
+            //     padding : 15px 30px;
+            //     border : none;
+            //     border-radius: 5px;
+            //     margin-left : 2%;
+            //     transition : all 0.2s;
+            //     &:hover{
+            //         cursor: pointer;
+            //         background-color: #005dc0;
+            //     }
+            // }
+        }
+        .Mid{
+            width : 90%;
             // width : auto;
             // background-color : #f0f4f9;
             // border-radius : 10px;
             display : flex;
             flex-direction: column;
-            align-items: flex-start;
+            // align-items: flex-start;
             height : 90%;
             overflow : auto;
         }

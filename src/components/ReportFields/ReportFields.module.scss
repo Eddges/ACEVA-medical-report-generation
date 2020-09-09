@@ -1,47 +1,111 @@
 .Mid{
-    width : 100%;
+    // width : 10%;
     // padding : 0px 20px;
     
     border-radius : 10px;
     display : flex;
     flex-direction: column;
-    overflow : auto;
+    // overflow : auto;
     width : auto;
     .MidTop{
         display : flex;
         align-items: center;
-        min-height : 60px;
+        min-height : 80px;
         padding : 0px 20px;
         // width : auto;
-        overflow : auto;
+        // overflow : auto;
         background-color : #f0f4f9;
+        background-color : #efffca;
         .ItemIcon{
             min-width : 80px;
         }
         .Item{
             min-width : 140px;
-            color : rgb(129, 129, 129);
+            color : rgb(90, 90, 90);
             font-weight: 600;
             display : flex;
+            font-size : 1rem;
             // background-color: yellow;
             flex-direction: column;
+            text-align: center;
             // align-items: center;
             .FieldDate{
-                margin-left : 5px;
+                // margin-left : 5px;
                 font-size : 0.7rem;
                 font-weight: 600;
                 color : #686868;
             }
         }
+        .VerticalLine{
+            width : 70%;
+            height : 1px;
+            background-color : #686868;
+        }
+        .Previous{
+            min-width : 420px;
+            display : flex;
+            flex-direction: column;
+            height : 80px;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size : 1rem;
+            // background-color : coral;
+            .Text{
+                color : rgb(90, 90, 90);
+                font-weight: 600;
+                // margin-bottom : 5px;
+            }
+            .Dates{
+                width : 100%;
+                display : flex;
+                .DateItem{
+                    min-width: 140px;
+                    text-align: center;
+                    font-size : 0.7rem;
+                    font-weight: 600;
+                    color : #686868;
+                    // margin-top : 5px;
+                }
+            }
+        }
+        .Current{
+            height : 100%;
+            min-width : 140px;
+            display : flex;
+            flex-direction: column;
+            height : 80px;
+            align-items: center;
+            font-size : 1rem;
+            justify-content: space-evenly;
+            // background-color : coral;
+            .Text{
+                color : rgb(90, 90, 90);
+                font-weight: 600;
+                // margin-bottom : 5px;
+            }
+            .Dates{
+                width : 100%;
+                display : flex;
+                .DateItem{
+                    min-width: 140px;
+                    text-align: center;
+                    font-size : 0.7rem;
+                    font-weight: 600;
+                    color : #686868;
+                    // margin-top : 5px;
+                }
+            }
+        }
         .Specific{
-            min-width : 200px;
+            min-width : 220px;
+            text-align: left;
         }
     }
     .MidReport{
-        width : auto;
+        // width : 100%;
         // display : flex;
         // flex-direction: column;
         height : 60vh;
-        overflow : auto;
+        // overflow : auto;
     }
 }

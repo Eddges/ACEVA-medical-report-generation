@@ -56,7 +56,7 @@ class Main extends Component {
             /> */}
           <label>
           <select value={this.state.currentItem.text} onChange={this.handleInput}>
-          <option value="grapefruit">Select Vitamin</option>
+            <option value="Select">Select Vitamin</option>
             <option value="Vitamin A 500mg">Vitamin A 500mg</option>
             <option value="Vitamin B 700mg">Vitamin B 700mg</option>
             <option value="Vitamin B12 Complex 900mg">Vitamin B12 Complex 900mg</option>

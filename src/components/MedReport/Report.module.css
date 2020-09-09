@@ -1,6 +1,6 @@
 .Container {
   width: 100%;
-  height: 100vh;
+  height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,8 +14,21 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px 100px;
-  background-color: #e9f3fe;
+  background-color: #96d70011;
+}
+
+.Container .Heading {
+  margin-top: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #525252;
 }
 
 .Container .Report {
@@ -31,11 +44,7 @@
           align-items: center;
   width: 100%;
   height: 100%;
-  padding: 10px 20px;
-  background-color: white;
-  -webkit-box-shadow: 20px -20px 60px #c6cfd8,  -20px 20px 60px #ffffff;
-          box-shadow: 20px -20px 60px #c6cfd8,  -20px 20px 60px #ffffff;
-  border-radius: 10px;
+  padding: 20px 0px;
   overflow: auto;
 }
 
@@ -135,84 +144,8 @@
   color: #444444;
 }
 
-.Container .Report .Top {
-  width: 100%;
-  padding: 0px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 100px;
-}
-
-.Container .Report .Top img {
-  height: 40px;
-}
-
-.Container .Report .Top .Select {
-  margin-left: 5%;
-}
-
-.Container .Report .Top .Select select {
-  width: 150px;
-  height: 45px;
-  background-color: white;
-  border: 1px solid #043c7024;
-  border-radius: 5px;
-  color: #043c70de;
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 0px 20px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><polygon points="0,0 100,0 50,80" style="fill: %23033c6f;" /></svg>');
-  background-position: right 10px top 50%;
-  background-repeat: no-repeat;
-  background-size: 10px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.Container .Report .Top .Select select:hover, .Container .Report .Top .Select select:focus {
-  cursor: pointer;
-  background-color: #043c7007;
-}
-
-.Container .Report .Top .Search {
-  margin-left: 100px;
-}
-
-.Container .Report .Top .Search input {
-  width: 300px;
-  height: 45px;
-  background-color: white;
-  border: 1px solid #043c7024;
-  border-radius: 5px;
-  color: #3d3d3d;
-  font-size: 0.9rem;
-  font-weight: 400;
-  padding: 0px 50px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-image: url("../../assets/Search.png");
-  background-position: left 15px top 50%;
-  background-repeat: no-repeat;
-  background-size: 15px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.Container .Report .Top .Search input:hover, .Container .Report .Top .Search input:focus {
-  background-color: #043c7007;
-}
-
-.Container .Report .Mid {
-  width: 100%;
-  border-radius: 10px;
+.Container .Report .Middle {
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,6 +156,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  height: 90%;
   overflow: auto;
 }
 
@@ -230,27 +164,24 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: static;
   bottom: 0px;
   height: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 50%;
-  background-color: #0075f6;
-  margin-top: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 15px;
   border-radius: 5px;
 }
 
 .Container .Report .Controls .Prescription {
   height: 40px;
   margin: 0px;
-  border-radius: 25px;
-  background-color: white;
   border: none;
-  color: #0075f6;
   width: 33%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -275,12 +206,13 @@
 
 .Container .Report .Controls .LabelFilter {
   margin: 0px;
-  background-color: transparent;
+  background-color: #97d700;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 33%;
+  color: white;
+  padding: 0px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -291,15 +223,17 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  margin-right: 20px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .Container .Report .Controls .LabelFilter .FilterText {
   color: white;
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: 800;
+  font-size: 1rem;
   margin-left: 10px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.438);
 }
 
 .Container .Report .Controls .LabelFilter:hover {
@@ -312,9 +246,11 @@
   height: 50px;
   width: 150px;
   margin: 0px;
-  background-color: transparent;
+  background-color: #97d700;
+  color: #fff;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.417);
+  margin-left: 20px;
   border: none;
-  width: 33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,8 +260,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white;
-  font-weight: 600;
+  font-weight: 900;
   font-size: 0.9rem;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;

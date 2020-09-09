@@ -11,62 +11,112 @@ const record = [
         previous2 : '23-01-20',
         previous3 : '19-09-19',
         report : {
-            'RBC' : {
+            'Glucose' : {
                 current : {
                     date : '12-08-20',
-                    value : 54
+                    value : 80.00
                 },
-                previous : {
+                previous1 : {
                     date : '11-05-20',
                     value : 65
                 }
             },
-            'HGB' : {
+            'Hemoglobin A1C' : {
                 current : {
                     date : '12-08-20',
-                    value : 63
+                    value : 5.20
                 },
-                previous : {
+                previous1 : {
                     date : '11-05-20',
                     value : 78
                 }
             },
-            'GLUCOSE' : {
+            'Magnesium' : {
                 current : {
                     date : '12-08-20',
-                    value : 67
+                    value : 2.10
                 },
-                previous : {
+                previous1 : {
                     date : '11-05-20',
                     value : 45
                 }
             },
-            'HBA1C' : {
+            'Iron - Serum' : {
                 current : {
                     date : '12-08-20',
-                    value : 70
+                    value : 52.00
                 },
-                previous : {
+                previous1 : {
                     date : '11-05-20',
                     value : 54
                 }
             },
-            'TRIGLYCERIDES' : {
+            'Ferritin' : {
                 current : {
                     date : '12-08-20',
-                    value : 87
+                    value : 12.00   
                 },
-                previous : {
+                previous1 : {
                     date : '11-05-20',
                     value : 23
                 }
             },
-            'AST' : {
+            'TIBC' : {
                 current : {
                     date : '12-08-20',
-                    value : 45
+                    value : 313.00
                 },
-                previous : {
+                previous1 : {
+                    date : '11-05-20',
+                    value : 54
+                }
+            },
+            '% Transferrin saturation' : {
+                current : {
+                    date : '12-08-20',
+                    value : 17.00
+                },
+                previous1 : {
+                    date : '11-05-20',
+                    value : 54
+                }
+            },
+            'Cholesterol - Total' : {
+                current : {
+                    date : '12-08-20',
+                    value : 181.00
+                },
+                previous1 : {
+                    date : '11-05-20',
+                    value : 54
+                }
+            },
+            'Triglycerides' : {
+                current : {
+                    date : '12-08-20',
+                    value : 68.00
+                },
+                previous1 : {
+                    date : '11-05-20',
+                    value : 54
+                }
+            },
+            'LDL Cholesterol' : {
+                current : {
+                    date : '12-08-20',
+                    value : 95.00
+                },
+                previous1 : {
+                    date : '11-05-20',
+                    value : 54
+                }
+            },
+            'HDL Cholesterol' : {
+                current : {
+                    date : '12-08-20',
+                    value : 72.00
+                },
+                previous1 : {
                     date : '11-05-20',
                     value : 54
                 }
@@ -77,70 +127,120 @@ const record = [
         user : "Test User",
         age : 66,
         gender : 'F',
-        prescription : ['Vitamin 2 1200mg', 'Vitamin C Capsules x10', 'Vitamin D Capsules x15', 'Vitamin E Capsules x5'],
-        current : '15-04-19',
-        previous1 : '18-07-18',
-        previous2 : '12-02-18',
-        previous3 : '27-09-17',
+        prescription : ['Vitamin 1 200mg', 'Vitamin 2 B12 Complex', 'Vitamin 3 Random Name', 'Vitamin 4 Name'],
+        current : '12-08-20',
+        previous1 : '11-05-20',
+        previous2 : '23-01-20',
+        previous3 : '19-09-19',
         report : {
-            'RBC' : {
+            'Glucose' : {
                 current : {
-                    date : '15-04-19',
-                    value : 32
+                    date : '12-08-20',
+                    value : 80.00
                 },
-                previous : {
+                previous1 : {
                     date : '11-05-20',
                     value : 65
                 }
             },
-            'HGB' : {
+            'Hemoglobin A1C' : {
                 current : {
                     date : '12-08-20',
-                    value : 45
+                    value : 5.20
                 },
-                previous : {
+                previous1 : {
                     date : '11-05-20',
-                    value : 65
-                }
-            },
-            'GLUCOSE' : {
-                current : {
-                    date : '12-08-20',
-                    value : 43
-                },
-                previous : {
-                    date : '11-05-20',
-                    value : 27
-                }
-            },
-            'HBA1C' : {
-                current : {
-                    date : '12-08-20',
                     value : 78
+                }
+            },
+            'Magnesium' : {
+                current : {
+                    date : '12-08-20',
+                    value : 2.10
                 },
-                previous : {
+                previous1 : {
+                    date : '11-05-20',
+                    value : 45
+                }
+            },
+            'Iron - Serum' : {
+                current : {
+                    date : '12-08-20',
+                    value : 52.00
+                },
+                previous1 : {
+                    date : '11-05-20',
+                    value : 54
+                }
+            },
+            'Ferritin' : {
+                current : {
+                    date : '12-08-20',
+                    value : 12.00   
+                },
+                previous1 : {
                     date : '11-05-20',
                     value : 23
                 }
             },
-            'TRIGLYCERIDES' : {
+            'TIBC' : {
                 current : {
                     date : '12-08-20',
-                    value : 56
+                    value : 313.00
                 },
-                previous : {
+                previous1 : {
                     date : '11-05-20',
-                    value : 39
+                    value : 54
                 }
             },
-            'AST' : {
+            '% Transferrin saturation' : {
                 current : {
                     date : '12-08-20',
-                    value : 36
+                    value : 17.00
                 },
-                previous : {
+                previous1 : {
                     date : '11-05-20',
-                    value : 76
+                    value : 54
+                }
+            },
+            'Cholesterol - Total' : {
+                current : {
+                    date : '12-08-20',
+                    value : 181.00
+                },
+                previous1 : {
+                    date : '11-05-20',
+                    value : 54
+                }
+            },
+            'Triglycerides' : {
+                current : {
+                    date : '12-08-20',
+                    value : 68.00
+                },
+                previous1 : {
+                    date : '11-05-20',
+                    value : 54
+                }
+            },
+            'LDL Cholesterol' : {
+                current : {
+                    date : '12-08-20',
+                    value : 95.00
+                },
+                previous1 : {
+                    date : '11-05-20',
+                    value : 54
+                }
+            },
+            'HDL Cholesterol' : {
+                current : {
+                    date : '12-08-20',
+                    value : 72.00
+                },
+                previous1 : {
+                    date : '11-05-20',
+                    value : 54
                 }
             }
         }
