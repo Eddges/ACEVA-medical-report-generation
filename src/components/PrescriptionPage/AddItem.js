@@ -27,7 +27,7 @@ export const AddItem = ({name, startDate,endDate,quantities, onChange, onSubmit}
 
        <div className = "secondary_input">
             <input
-                type="text"
+                type="date"
                 //  className="form-control"
                 placeholder="dd/mm/yyyy"
                 value={startDate}
@@ -36,7 +36,7 @@ export const AddItem = ({name, startDate,endDate,quantities, onChange, onSubmit}
             />
 
                 <input
-                type="text"
+                type="date"
                 //  className="form-control"
                 placeholder="dd/mm/yyyy"
                 value={endDate}
