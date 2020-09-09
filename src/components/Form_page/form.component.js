@@ -12,6 +12,12 @@ class FormPage extends React.Component {
         userID : ''
     }
 
+    // componentDidMount() {
+    //     this.setState({
+    //         userID : null
+    //     })
+    // }
+
     handleUserInput = (e) => {
         this.setState({
             userID : e.target.value

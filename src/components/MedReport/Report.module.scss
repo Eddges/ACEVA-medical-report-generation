@@ -217,8 +217,12 @@
 @media(max-width : 576px) {
     .Container{
         padding : 10px 10px;
+        .Heading{
+            text-align: center;
+        }
         .Report{
             padding : 10px 5px;
+
             .UserAreaPhone{
                 margin-top : 20px;
                 width : 100%;

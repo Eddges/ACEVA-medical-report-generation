@@ -6,6 +6,7 @@ import ref from '../../data/ref'
 import ReactToPrint from 'react-to-print';
 import ReportFields from '../ReportFields/ReportFields'
 import Portal from '../Portal/Portal';
+import UserConfirmation from '../UserConfirmation/UserConfirmation'
 
 
 
@@ -13,13 +14,21 @@ class MedReport extends React.Component{
 
     state = {
         showCurrent : 0,
-        filterState : 0
+        filterState : 0,
+        userConfirmation : true
+    }
+
+    toggleUserConfirmation = () => {
+        this.setState({
+            ...this.state,
+            userConfirmation : !this.state.userConfirmation
+        })
     }
 
     render(){
 
         // const currUser = this.props.userName
-        const currUser = this.props.userName ? this.props.userName : 'John Doe'
+        const currUser = this.props.userName ? this.props.user.user : 'John Doe'
         const userInfo = record.find(user => {
             return user.user === currUser
         })
@@ -82,60 +91,10 @@ class MedReport extends React.Component{
         return(
             <div className={classes.Container}>
 
+                {this.state.userConfirmation ? <UserConfirmation passUser={(user) => this.props.passUser(user)} userReset={this.props.userReset} user={this.props.user} toggleUserConfirmation={this.toggleUserConfirmation} /> : null}
+
                 <span className={classes.Heading}>BLOOD TEST REPORT RESULT</span>
                 <div className={classes.Report}>
-
-                    {/* <div className={classes.Top}>
-
-                        <img src={Logo} alt="Logo" />
-
-
-
-
-
-                        <div className={classes.UserAreaDesktop}>
-
-                            <div className={classes.UserDetails}>
-                                <i className="fas fa-user-circle" style={{'color' : 'white'}}></i>
-                                <span className={classes.UserName}>{currUser}</span>
-                                <span className={classes.UserAge}>Age : {userInfo.age}</span>
-                                <span className={classes.UserGender}>Gender : {userInfo.gender}</span>
-
-                            </div>
-
-                            <div className={classes.PrescriptionDetails}>
-                                {userInfo.prescription.map((iterator, index) => (
-                                    <span key={index} className={classes.PrescriptionItem}>{iterator}</span>
-                                ))}
-                            </div>
-
-                        </div>
-
-
-
-                        <div className={classes.UserAreaPhone}>
-
-                            <div className={classes.UserDetails}>
-                                <i className="fas fa-user-circle" style={{'color' : 'white'}}></i>
-                                <span className={classes.UserName}>{currUser}</span>
-                                <span className={classes.UserAge}>Age : {userInfo.age}</span>
-                                <span className={classes.UserGender}>Gender : {userInfo.gender}</span>
-
-                            </div>
-
-                            <div className={classes.PrescriptionDetails}>
-                                {userInfo.prescription.map((iterator, index) => (
-                                    <span key={index} className={classes.PrescriptionItem}>{iterator}</span>
-                                ))}
-                            </div>
-
-                        </div>
-
-
-
-
-
-                    </div> */}
                     
                     <div className={classes.Middle}>
                         <ReportFields filterState={this.state.filterState} ref={el => (this.componentRef = el)} mainArray={mainArray} userInfo={userInfo} />
@@ -148,7 +107,6 @@ class MedReport extends React.Component{
                             <span className={classes.FilterText}>FILTER</span>
                         </div>
 
-                        {/* <button className={classes.Prescription}>Prescription</button> */}
                         <Portal/>
 
 

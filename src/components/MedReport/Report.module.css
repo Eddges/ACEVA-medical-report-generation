@@ -276,6 +276,9 @@
   .Container {
     padding: 10px 10px;
   }
+  .Container .Heading {
+    text-align: center;
+  }
   .Container .Report {
     padding: 10px 5px;
   }
