@@ -130,9 +130,9 @@ class Prescription extends Component{
             <tr>
                 <th>Supplements</th>
               
-                <th>startDate</th>
-                <th>endDate</th>
-                <th>quantities</th>
+                <th>start-date</th>
+                <th>end-date</th>
+                <th>Quantity</th>
                 <th className = "none"> bq</th>
                 <th className = "none">bq </th>
             </tr>
