@@ -132,6 +132,7 @@ class Prescription extends Component{
               
                 <th>Start Date</th>
                 <th>End Date</th>
+f9472733aa33c2fc712419f925885077a91847ca
                 <th>Quantity</th>
                 <th className = "none"> bq</th>
                 <th className = "none">bq </th>
