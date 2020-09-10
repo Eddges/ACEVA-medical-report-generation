@@ -1,5 +1,11 @@
 import React from 'react';
 import styles from './Footer.module.css';
+import flogo from '../../assets/facebook.png';
+import tlogo from '../../assets/twitter.png';
+import ilogo from '../../assets/insta.png';
+import plogo from '../../assets/phone.png';
+import ylogo from '../../assets/youtube.png';
+import ulogo from '../../assets/user.png';
 // import hurraylogo from '../../assets/hurraylogo.png';
 
 function Footer() {
@@ -7,7 +13,7 @@ function Footer() {
         <div className={styles.footer}>
       <div className = {styles.footer_up}>
         <div className = {styles.box}>
-          {/* <img src = {hurraylogo}/> */}
+          {/* <img src = {flogo}/> */}
         </div>
         <div className = {styles.box}>
           <p className = {styles.label} >Company</p>
