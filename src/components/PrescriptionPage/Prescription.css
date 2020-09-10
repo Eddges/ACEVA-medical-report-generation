@@ -23,7 +23,7 @@
     height: auto;
     align-items: center;
     justify-content: center;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     overflow-y: scroll;
 }
 
@@ -107,6 +107,7 @@ td input:focus {
         width: 90%;
         margin-bottom: 10px;
         margin-top: 8em;
+        overflow-x: scroll;
     }
 
     .pres_wrapper .pres_container .table_container table {
