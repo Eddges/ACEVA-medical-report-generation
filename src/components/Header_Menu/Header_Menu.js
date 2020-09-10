@@ -17,6 +17,11 @@ const  Header_Menu = (props) => {
             <div className={classes.Search}>
                 <input placeholder="Search Record" />
             </div>
+            <div className={classes.Hamburger}>
+                <div className={classes.Line}></div>
+                <div className={classes.Line}></div>
+                <div className={classes.Line}></div>
+            </div>
         </div>
     )
 }

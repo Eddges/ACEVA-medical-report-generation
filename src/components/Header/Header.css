@@ -39,6 +39,18 @@
 .header_wrapper .header_content .header_right {
     display: flex;
     flex-basis: 50%;
+    justify-content: flex-end;
+    color : white;
+    /* margin-left: auto; */
+}
+
+.header_wrapper .header_content .header_right .header_right_doctorName{
+    display: flex;
+    /* flex-basis: 50%; */
+    color : white;
+    font-size : 0.9rem;
+    font-weight : 600;
+    margin-left : 15px;
     /* margin-left: auto; */
 }
 
@@ -67,7 +79,7 @@
     .header_wrapper {
         display: flex;
         flex-direction: column;
-        height: 70px;
+        height: auto;
         width: 100%;
         background-color: rgb(68, 67, 67);
         justify-content: center;
@@ -88,7 +100,7 @@
         color: white;
         justify-content: center;
         align-items: center;
-      
+        display : none;
     }
 
     .header_wrapper .header_content .header_right {
@@ -97,6 +109,7 @@
         justify-content: center;
         align-items: center;
         margin-top: 10px;
+        margin-bottom : 10px;
         /* height: 50px; */
         /* margin-left: 0; */
     }

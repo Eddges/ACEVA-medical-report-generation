@@ -10,6 +10,9 @@ const record = [
         previous1 : '11-05-20',
         previous2 : '23-01-20',
         previous3 : '19-09-19',
+        email : 'johndoe@example.com',
+        telephone : '602 5976 4342',
+        mobile : '9008765432',
         report : {
             'Glucose' : {
                 current : {

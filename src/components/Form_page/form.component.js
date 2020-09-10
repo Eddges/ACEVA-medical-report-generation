@@ -24,7 +24,8 @@ class FormPage extends React.Component {
         })
     }
 
-    handleSubmit = () => {
+    handleSubmit = (e) => {
+        e.preventDefault()
         if(this.state.userID==='') {
             alert('Please fill in a valid LabCorp ID')
         }
@@ -51,15 +52,15 @@ class FormPage extends React.Component {
                     <img src = {Chirologo} alt="Logo"/>
                 </div> */}
                 <div className = "form_wrapper">
-                    <div className = "content">
+                    <form className = "content" onSubmit={(e) => this.handleSubmit(e)}>
                         <p>LabCorpID</p>
-                        <input type="text" onChange={(e)=> this.handleUserInput(e)} />
+                        <input type="text" placeholder="Enter ID here" onChange={(e)=> this.handleUserInput(e)} />
                         {/* <NavLink to="/form"> */}
-                        <div className = "btn" onClick={() => this.handleSubmit()} >
-                            <p>Fetch Report</p>
-                        </div>
+                        <button type="button" className = "btn" onClick={(e) => this.handleSubmit(e)} >
+                            Fetch Report
+                        </button>
                         {/* </NavLink> */}
-                    </div>
+                    </form>
                    
                 </div>
             </div>

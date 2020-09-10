@@ -17,9 +17,20 @@
   background-color: #96d70011;
 }
 
-.Container .Heading {
+.Container .Upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 30px;
-  width: 100%;
+  width: 80%;
+}
+
+.Container .Upper .Heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,6 +40,29 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #525252;
+  border-radius: 5px;
+}
+
+.Container .Upper .ActiveDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Upper .ActiveDetails i {
+  margin-right: -10px;
+}
+
+.Container .Upper .ActiveDetails .Info {
+  color: #525252;
+  font-weight: 600;
+  margin-left: 20px;
 }
 
 .Container .Report {
@@ -149,6 +183,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-radius: 8px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -223,6 +258,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  border-radius: 5px;
   margin-right: 20px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -254,6 +290,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-radius: 5px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -275,9 +312,20 @@
 @media (max-width: 576px) {
   .Container {
     padding: 10px 10px;
+    height: 90vh;
   }
-  .Container .Heading {
+  .Container .Upper .Heading {
     text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .Container .Upper .Upper .ActiveDetails {
+    padding: 0px 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .Container .Report {
     padding: 10px 5px;
@@ -404,7 +452,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: fixed;
     bottom: 0px;
     height: auto;
     -webkit-box-align: center;
@@ -414,7 +461,6 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
-    background-color: #97d700;
     border-radius: 0px;
   }
   .Container .Report .Controls .Prescription {
@@ -422,9 +468,10 @@
     margin: 0px;
     border-radius: 25px;
     background-color: white;
+    background-color: #97d700;
     border: none;
     color: #0075f6;
-    width: 33%;
+    width: 30%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -444,7 +491,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 33%;
+    padding: 0px 10px;
+    margin-right: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -454,24 +502,24 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    background-color: #97d700;
     height: 100%;
   }
   .Container .Report .Controls .LabelFilter .FilterText {
     color: white;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-left: 10px;
   }
   .Container .Report .Controls .PDF {
     height: 50px;
-    width: 150px;
     margin: 0px;
     background-color: transparent;
     border: none;
-    width: 33%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0px 10px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -479,8 +527,10 @@
         -ms-flex-pack: center;
             justify-content: center;
     color: white;
+    background-color: #97d700;
+    margin-left: 15px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 

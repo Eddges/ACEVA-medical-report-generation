@@ -93,7 +93,23 @@ class MedReport extends React.Component{
 
                 {this.state.userConfirmation ? <UserConfirmation passUser={(user) => this.props.passUser(user)} userReset={this.props.userReset} user={this.props.user} toggleUserConfirmation={this.toggleUserConfirmation} /> : null}
 
+                <div className={classes.Upper}>
                 <span className={classes.Heading}>BLOOD TEST REPORT RESULT</span>
+                    <div className={classes.ActiveDetails}>
+                        <i className={`${"fas fa-user"}`} style={{'color' : 'rgb(82, 82, 82)'}}></i>
+                        <p className={classes.Info}> {this.props.user ? this.props.user.user :  "NA"}</p>
+                        {
+                            this.props.user ? <p className={classes.Info}>Gender : {this.props.user.gender}</p>
+                            : null
+                        }
+                        {
+                            this.props.user ? <p className={classes.Info}>Age : {this.props.user.age}</p>
+                            : null
+                        }
+                    </div>
+
+                </div>
+                
                 <div className={classes.Report}>
                     
                     <div className={classes.Middle}>

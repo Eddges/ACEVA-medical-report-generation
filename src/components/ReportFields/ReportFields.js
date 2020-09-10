@@ -27,17 +27,17 @@ class ReportFields extends React.Component{
                 <div className={classes.MidTop}>
 
                     {/* <i className={`${classes.ItemIcon} ${"fas fa-file-medical"}`} style={{'color' : '#0075f6'}}></i> */}
-                    <span className={`${classes.Item} ${classes.Specific}`}>Element</span>
+                    <span className={`${classes.Item} ${classes.Specific}`}>ELEMENT</span>
                     
                     <div className={classes.Current}>
-                        <span className={classes.Text}>Current</span>
+                        <span className={classes.Text}>CURRENT</span>
                         <span className={classes.VerticalLine}></span>
                         <div className={classes.Dates}>
                             <span className={classes.DateItem}><span className={classes.FieldDate}>{this.props.userInfo.current}</span></span>
                         </div>
                     </div>
                     <div className={classes.Previous}>
-                        <span className={classes.Text}>Previous</span>
+                        <span className={classes.Text}>PREVIOUS</span>
                         <span className={classes.VerticalLine}></span>
                         <div className={classes.Dates}>
                             <span className={classes.DateItem}><span className={classes.FieldDate}>{this.props.userInfo.previous1}</span></span>
@@ -48,9 +48,9 @@ class ReportFields extends React.Component{
                     
 
                     {/* <span className={classes.Item}>Status</span> */}
-                    <span className={classes.Item}>Optimal Range</span>
-                    <span className={classes.Item}>Standard Range</span>
-                    <span className={classes.Item}>Unit</span>
+                    <span className={classes.Item}>OPTIMAL RANGE</span>
+                    <span className={classes.Item}>STANDARD RANGE</span>
+                    <span className={classes.Item}>UNIT</span>
 
                 </div>
 

@@ -9,15 +9,38 @@
     // padding : 20px 100px;
     // background-color : #e9f3fe;
     background-color : #96d70011;
-    .Heading{
-        margin-top : 30px;
-        width : 100%;
+    .Upper{
         display : flex;
-        justify-content: center;
-        font-size : 1.5rem;
-        font-weight: 600;
-        color : rgb(82, 82, 82);
+        flex-wrap : wrap;
+        justify-content: space-between;
+        margin-top : 30px;
+        width : 80%;
+        .Heading{
+           
+            // width : 100%;
+            display : flex;
+            justify-content: center;
+            font-size : 1.5rem;
+            font-weight: 600;
+            color : rgb(82, 82, 82);
+
+            border-radius : 5px;
+        }
+        .ActiveDetails{
+            display : flex;
+            justify-content: flex-end;
+            align-items: center;
+            i{
+                margin-right : -10px;
+            }
+            .Info{
+                color : rgb(82, 82, 82);
+                font-weight: 600;
+                margin-left : 20px;
+            }
+        }
     }
+
     .Report{
         display : flex;
         flex-direction: column;
@@ -111,6 +134,7 @@
             // background-color : #f0f4f9;
             // border-radius : 10px;
             display : flex;
+            border-radius : 8px;
             flex-direction: column;
             align-items: flex-start;
             height : 90%;
@@ -160,6 +184,7 @@
                 align-items: center;
                 justify-content: center;
                 height : 100%;
+                border-radius: 5px;
                 margin-right : 20px;
                 transition : all 0.2s;
                 .FilterText{
@@ -187,6 +212,7 @@
                 border : none;
                 // width : 100px;
                 display : flex;
+                border-radius: 5px;
                 align-items: center;
                 justify-content: center;
                 font-weight: 900;
@@ -217,9 +243,22 @@
 @media(max-width : 576px) {
     .Container{
         padding : 10px 10px;
-        .Heading{
-            text-align: center;
+        height : 90vh;
+        .Upper{
+            .Heading{
+                text-align: center;
+                font-size : 1.5rem;
+                margin-bottom : 20px;
+            }
+            .Upper{
+                .ActiveDetails{
+                    padding : 0px 10px;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                }
+            }
         }
+
         .Report{
             padding : 10px 5px;
 
@@ -364,23 +403,24 @@
 
             .Controls{
                 display : flex;
-                position : fixed;
+                // position : fixed;
                 bottom : 0px;
                 height : auto;
                 align-items: center;
                 justify-content: space-between;
                 width : 100%;
-                background-color: #97d700;
+                
                 border-radius : 0px;
                 .Prescription{
                     height : 40px;
                     margin : 0px;
                     border-radius : 25px;
                     background-color: white;
+                    background-color: #97d700;
                     // background-color : coral;
                     border : none;
                     color : #0075f6;
-                    width : 33%;
+                    width : 30%;
                     display : flex;
                     align-items: center;
                     justify-content: center;
@@ -393,32 +433,39 @@
                     flex-direction: row;
                     // margin-left : 20px;
                     // background-color : green;
-                    width : 33%;
+                    // width : 30%;
+                    padding : 0px 10px;
+                    margin-right : 10px;
+                    // border-radius: 5;
                     display : flex;
                     align-items: center;
                     justify-content: center;
+                    background-color: #97d700;
                     height : 100%;
                     .FilterText{
                         color : white;
                         font-weight: 600;
-                        font-size : 0.9rem;
+                        font-size : 0.8rem;
                         margin-left : 10px;
                     }
                 }
                 .PDF{
                     height : 50px;
-                    width : 150px;
+                    // width : 150px;
                     margin : 0px;
                     background-color: transparent;
                     // background-color : red;
                     border : none;
-                    width : 33%;
+                    // width : 30%;
                     display : flex;
+                    padding : 0px 10px;
                     align-items: center;
                     justify-content: center;
                     color : white;
+                    background-color: #97d700;
+                    margin-left : 15px;
                     font-weight: 600;
-                    font-size : 0.9rem;
+                    font-size : 0.8rem;
                 }
             }
         }

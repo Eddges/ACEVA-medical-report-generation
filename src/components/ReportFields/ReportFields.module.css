@@ -30,7 +30,7 @@
 .Mid .MidTop .Item {
   min-width: 140px;
   color: #5a5a5a;
-  font-weight: 600;
+  font-weight: 900;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +75,7 @@
 
 .Mid .MidTop .Previous .Text {
   color: #5a5a5a;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .Mid .MidTop .Previous .Dates {
@@ -115,7 +115,7 @@
 
 .Mid .MidTop .Current .Text {
   color: #5a5a5a;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .Mid .MidTop .Current .Dates {
