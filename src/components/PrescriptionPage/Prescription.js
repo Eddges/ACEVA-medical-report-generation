@@ -12,13 +12,13 @@ class Prescription extends Component{
     quantities: "",
     items: [
       {
-        name : 'Vitamin1',
+        name : 'Sine-Aid',
         startDate: '10/08/2020',
         endDate: '20/08/2020',
         quantities: '10'
       },
       {
-        name : 'Vitamin2',
+        name : 'Triple Mag',
         startDate: '20/08/2020',
         endDate: '25/08/2020',
         quantities: 'none'
@@ -130,9 +130,9 @@ class Prescription extends Component{
             <tr>
                 <th>Supplements</th>
               
-                <th>startDate</th>
-                <th>endDate</th>
-                <th>quantities</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Quantity</th>
                 <th className = "none"> bq</th>
                 <th className = "none">bq </th>
             </tr>

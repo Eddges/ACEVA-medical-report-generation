@@ -17,10 +17,10 @@ export const AddItem = ({name, startDate,endDate,quantities, onChange, onSubmit}
                 onChange={onChange}
             >
                 <option value = "none">Select Item</option>
-                <option value="Vitamin1">Vitamin1</option>
-                <option value="Vitamin2">Vitamin2</option>
-                <option selected value="Vitamin3">Vitamin3</option>
-                <option value="Vitamin4">Vitamin4</option>
+                <option value="Sine-Aid">Sine-Aid</option>
+                <option value="Omega 3 Plus">Omega 3 Plus</option>
+                <option selected value="Active D">Active D</option>
+                <option value="Triple Mag">Triple Mag</option>
             </select>
             <button type="submit">Add</button>
 
@@ -55,7 +55,7 @@ export const AddItem = ({name, startDate,endDate,quantities, onChange, onSubmit}
             <input
                 type="text"
                 //  className="form-control"
-                placeholder="quantity"
+                placeholder="Quantity"
                 value={quantities}
                 name="quantities"
                 onChange={onChange}

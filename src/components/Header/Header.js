@@ -21,16 +21,7 @@ function Header(props) {
 
                 </div>
                 <div className = "header_right">
-                    {/* <img src = {ulogo}/>
-                    <p> {props.user ? props.user.user :  "Login"}</p>
-                    {
-                        props.user ? <p className = "reg">Gender {props.user.gender}</p>
-                        : null
-                    }
-                    {
-                        props.user ? <p className = "reg">Age {props.user.age}</p>
-                        : null
-                    } */}
+
                     <i className={`${"fas fa-user-md"}`} style={{'color' : '#fff'}}></i>
                     <span className="header_right_doctorName">Dr. Michael Leslie</span>
                 </div>
