@@ -118,9 +118,9 @@ class Prescription extends Component{
         <table width = "80%">
             <tr>
                 <th>Supplements</th>
-                <th>quantities</th>
-                <th>startDate</th>
-                <th>endDate</th>
+                <th>Quantity</th>
+                <th>Start Date</th>
+                <th>End Date</th>
                 <th className = "none"> bq</th>
                 <th className = "none">bq </th>
             </tr>

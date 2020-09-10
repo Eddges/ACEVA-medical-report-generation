@@ -57,16 +57,22 @@
 
 .main_wrapper .input_form .main_input button{
     height: 30px;
-    width: 70px;
-    margin-left: 10px;
+    width: 100px;
+    margin-left: 15px;
     border: none;
     background-color: #97d700;
-    color: black;
+    color: white;
     border-radius: 4px;
+    font-weight: 900;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.507);
 }
 
 .main_wrapper .input_form .main_input button:focus{
     outline: none;
+}
+
+.main_wrapper .input_form .main_input button:hover{
+    cursor: pointer;
 }
 
 .main_wrapper .input_form .secondary_input {

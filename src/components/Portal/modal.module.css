@@ -44,10 +44,13 @@
     /* background-color: rgb(9, 175, 9); */
     background-color: #97d700;
     border: none;
-    color: black;
+    color: white;
     font-weight: bold;
-    font-size: 0.8em;
-
+    font-size: 1rem;
+    text-shadow : 0px 0px 5px rgba(0, 0, 0, 0.294);
+}
+.Footer button:hover, .Footer .button2:hover {
+    cursor: pointer;
 }
 
 .Footer .button2 {
@@ -57,10 +60,10 @@
     width: 75px;
     background-color: green;
     border: none;
-    color: black;
+    color: white;
     font-weight: bold;
-    font-size: 0.8em;
-
+    font-size: 1rem;
+    text-shadow : 0px 0px 5px rgba(0, 0, 0, 0.65);
 }
 
 @media (max-width: 768px) {
