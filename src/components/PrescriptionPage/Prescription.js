@@ -12,14 +12,14 @@ class Prescription extends Component{
     quantities: "",
     items: [
       {
-        name : 'Vitamin1',
+        name : 'Sine-Aid',
         startDate: '10/08/2020',
-        endDate: '20/08/2020',
+        endDate: '2020/08/20',
         quantities: '10'
       },
       {
-        name : 'Vitamin2',
-        startDate: '20/08/2020',
+        name : 'Triple Mag',
+        startDate: '2020/08/20',
         endDate: '25/08/2020',
         quantities: 'none'
       }
