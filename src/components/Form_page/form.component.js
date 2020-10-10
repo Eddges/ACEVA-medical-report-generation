@@ -53,7 +53,7 @@ class FormPage extends React.Component {
                 </div> */}
                 <div className = "form_wrapper">
                     <form className = "content" onSubmit={(e) => this.handleSubmit(e)}>
-                        <p>LabCorpID</p>
+                        <p>Enter LabCorpID</p>
                         <input type="text" placeholder="Enter ID here" onChange={(e)=> this.handleUserInput(e)} />
                         {/* <NavLink to="/form"> */}
                         <button type="button" className = "btn" onClick={(e) => this.handleSubmit(e)} >
